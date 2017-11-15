@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/05transformation_matrix.dir/05transformation_matrix.cpp.o CMakeFiles/05transformation_matrix.dir/__/glad/src/glad.c.o CMakeFiles/05transformation_matrix.dir/__/stb_image.cpp.o  -o 05transformation_matrix -Wl,-rpath,/usr/local/lib -rdynamic -lGLU /usr/local/lib/libGL.so /usr/local/lib/libglfw.so.3.3 -ldl 

@@ -56,38 +56,16 @@ CMAKE_BINARY_DIR = /home/wang/github/LearnOpenGL/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target install/local
+install/local/fast: install/local
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
+.PHONY : install/local/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -100,6 +78,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -111,16 +100,27 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : install/local/fast
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -155,34 +155,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-01GettingStarted/CMakeFiles/03shader_program.dir/rule:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/03shader_program.dir/rule
-.PHONY : 01GettingStarted/CMakeFiles/03shader_program.dir/rule
+01GettingStarted/CMakeFiles/01hello_window_clear.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/01hello_window_clear.dir/rule
+.PHONY : 01GettingStarted/CMakeFiles/01hello_window_clear.dir/rule
 
 # Convenience name for target.
-03shader_program: 01GettingStarted/CMakeFiles/03shader_program.dir/rule
+01hello_window_clear: 01GettingStarted/CMakeFiles/01hello_window_clear.dir/rule
 
-.PHONY : 03shader_program
+.PHONY : 01hello_window_clear
 
 # fast build rule for target.
-03shader_program/fast:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/build
-.PHONY : 03shader_program/fast
-
-# Convenience name for target.
-01GettingStarted/CMakeFiles/02hello_triangle.dir/rule:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/02hello_triangle.dir/rule
-.PHONY : 01GettingStarted/CMakeFiles/02hello_triangle.dir/rule
-
-# Convenience name for target.
-02hello_triangle: 01GettingStarted/CMakeFiles/02hello_triangle.dir/rule
-
-.PHONY : 02hello_triangle
-
-# fast build rule for target.
-02hello_triangle/fast:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/build
-.PHONY : 02hello_triangle/fast
+01hello_window_clear/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/01hello_window_clear.dir/build.make 01GettingStarted/CMakeFiles/01hello_window_clear.dir/build
+.PHONY : 01hello_window_clear/fast
 
 # Convenience name for target.
 01GettingStarted/CMakeFiles/04textures_combined.dir/rule:
@@ -200,19 +185,64 @@ depend:
 .PHONY : 04textures_combined/fast
 
 # Convenience name for target.
-01GettingStarted/CMakeFiles/01hello_window_clear.dir/rule:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/01hello_window_clear.dir/rule
-.PHONY : 01GettingStarted/CMakeFiles/01hello_window_clear.dir/rule
+01GettingStarted/CMakeFiles/02hello_triangle.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/02hello_triangle.dir/rule
+.PHONY : 01GettingStarted/CMakeFiles/02hello_triangle.dir/rule
 
 # Convenience name for target.
-01hello_window_clear: 01GettingStarted/CMakeFiles/01hello_window_clear.dir/rule
+02hello_triangle: 01GettingStarted/CMakeFiles/02hello_triangle.dir/rule
 
-.PHONY : 01hello_window_clear
+.PHONY : 02hello_triangle
 
 # fast build rule for target.
-01hello_window_clear/fast:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/01hello_window_clear.dir/build.make 01GettingStarted/CMakeFiles/01hello_window_clear.dir/build
-.PHONY : 01hello_window_clear/fast
+02hello_triangle/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/build
+.PHONY : 02hello_triangle/fast
+
+# Convenience name for target.
+01GettingStarted/CMakeFiles/03shader_program.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/03shader_program.dir/rule
+.PHONY : 01GettingStarted/CMakeFiles/03shader_program.dir/rule
+
+# Convenience name for target.
+03shader_program: 01GettingStarted/CMakeFiles/03shader_program.dir/rule
+
+.PHONY : 03shader_program
+
+# fast build rule for target.
+03shader_program/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/build
+.PHONY : 03shader_program/fast
+
+# Convenience name for target.
+01GettingStarted/CMakeFiles/06coordinate_system.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/06coordinate_system.dir/rule
+.PHONY : 01GettingStarted/CMakeFiles/06coordinate_system.dir/rule
+
+# Convenience name for target.
+06coordinate_system: 01GettingStarted/CMakeFiles/06coordinate_system.dir/rule
+
+.PHONY : 06coordinate_system
+
+# fast build rule for target.
+06coordinate_system/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/build
+.PHONY : 06coordinate_system/fast
+
+# Convenience name for target.
+01GettingStarted/CMakeFiles/05transformation_matrix.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/05transformation_matrix.dir/rule
+.PHONY : 01GettingStarted/CMakeFiles/05transformation_matrix.dir/rule
+
+# Convenience name for target.
+05transformation_matrix: 01GettingStarted/CMakeFiles/05transformation_matrix.dir/rule
+
+.PHONY : 05transformation_matrix
+
+# fast build rule for target.
+05transformation_matrix/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build
+.PHONY : 05transformation_matrix/fast
 
 01hello_window_clear.o: 01hello_window_clear.cpp.o
 
@@ -322,16 +352,72 @@ depend:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/04textures_combined.cpp.s
 .PHONY : 04textures_combined.cpp.s
 
+05transformation_matrix.o: 05transformation_matrix.cpp.o
+
+.PHONY : 05transformation_matrix.o
+
+# target to build an object file
+05transformation_matrix.cpp.o:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/05transformation_matrix.cpp.o
+.PHONY : 05transformation_matrix.cpp.o
+
+05transformation_matrix.i: 05transformation_matrix.cpp.i
+
+.PHONY : 05transformation_matrix.i
+
+# target to preprocess a source file
+05transformation_matrix.cpp.i:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/05transformation_matrix.cpp.i
+.PHONY : 05transformation_matrix.cpp.i
+
+05transformation_matrix.s: 05transformation_matrix.cpp.s
+
+.PHONY : 05transformation_matrix.s
+
+# target to generate assembly for a file
+05transformation_matrix.cpp.s:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/05transformation_matrix.cpp.s
+.PHONY : 05transformation_matrix.cpp.s
+
+06coordinate_system.o: 06coordinate_system.cpp.o
+
+.PHONY : 06coordinate_system.o
+
+# target to build an object file
+06coordinate_system.cpp.o:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/06coordinate_system.cpp.o
+.PHONY : 06coordinate_system.cpp.o
+
+06coordinate_system.i: 06coordinate_system.cpp.i
+
+.PHONY : 06coordinate_system.i
+
+# target to preprocess a source file
+06coordinate_system.cpp.i:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/06coordinate_system.cpp.i
+.PHONY : 06coordinate_system.cpp.i
+
+06coordinate_system.s: 06coordinate_system.cpp.s
+
+.PHONY : 06coordinate_system.s
+
+# target to generate assembly for a file
+06coordinate_system.cpp.s:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/06coordinate_system.cpp.s
+.PHONY : 06coordinate_system.cpp.s
+
 __/glad/src/glad.o: __/glad/src/glad.c.o
 
 .PHONY : __/glad/src/glad.o
 
 # target to build an object file
 __/glad/src/glad.c.o:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/__/glad/src/glad.c.o
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/__/glad/src/glad.c.o
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/__/glad/src/glad.c.o
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/01hello_window_clear.dir/build.make 01GettingStarted/CMakeFiles/01hello_window_clear.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/__/glad/src/glad.c.o
 .PHONY : __/glad/src/glad.c.o
 
 __/glad/src/glad.i: __/glad/src/glad.c.i
@@ -340,10 +426,12 @@ __/glad/src/glad.i: __/glad/src/glad.c.i
 
 # target to preprocess a source file
 __/glad/src/glad.c.i:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/__/glad/src/glad.c.i
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/__/glad/src/glad.c.i
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/__/glad/src/glad.c.i
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/01hello_window_clear.dir/build.make 01GettingStarted/CMakeFiles/01hello_window_clear.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/__/glad/src/glad.c.i
 .PHONY : __/glad/src/glad.c.i
 
 __/glad/src/glad.s: __/glad/src/glad.c.s
@@ -352,10 +440,12 @@ __/glad/src/glad.s: __/glad/src/glad.c.s
 
 # target to generate assembly for a file
 __/glad/src/glad.c.s:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/__/glad/src/glad.c.s
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/__/glad/src/glad.c.s
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/__/glad/src/glad.c.s
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/01hello_window_clear.dir/build.make 01GettingStarted/CMakeFiles/01hello_window_clear.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/__/glad/src/glad.c.s
 .PHONY : __/glad/src/glad.c.s
 
 __/stb_image.o: __/stb_image.cpp.o
@@ -365,6 +455,8 @@ __/stb_image.o: __/stb_image.cpp.o
 # target to build an object file
 __/stb_image.cpp.o:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/__/stb_image.cpp.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/__/stb_image.cpp.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/__/stb_image.cpp.o
 .PHONY : __/stb_image.cpp.o
 
 __/stb_image.i: __/stb_image.cpp.i
@@ -374,6 +466,8 @@ __/stb_image.i: __/stb_image.cpp.i
 # target to preprocess a source file
 __/stb_image.cpp.i:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/__/stb_image.cpp.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/__/stb_image.cpp.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/__/stb_image.cpp.i
 .PHONY : __/stb_image.cpp.i
 
 __/stb_image.s: __/stb_image.cpp.s
@@ -383,6 +477,8 @@ __/stb_image.s: __/stb_image.cpp.s
 # target to generate assembly for a file
 __/stb_image.cpp.s:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/__/stb_image.cpp.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/__/stb_image.cpp.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/__/stb_image.cpp.s
 .PHONY : __/stb_image.cpp.s
 
 # Help Target
@@ -391,16 +487,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... 03shader_program"
-	@echo "... 02hello_triangle"
-	@echo "... 04textures_combined"
 	@echo "... 01hello_window_clear"
+	@echo "... 04textures_combined"
+	@echo "... 02hello_triangle"
+	@echo "... 03shader_program"
+	@echo "... 06coordinate_system"
+	@echo "... 05transformation_matrix"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... install/strip"
+	@echo "... list_install_components"
+	@echo "... install"
 	@echo "... 01hello_window_clear.o"
 	@echo "... 01hello_window_clear.i"
 	@echo "... 01hello_window_clear.s"
@@ -413,6 +511,12 @@ help:
 	@echo "... 04textures_combined.o"
 	@echo "... 04textures_combined.i"
 	@echo "... 04textures_combined.s"
+	@echo "... 05transformation_matrix.o"
+	@echo "... 05transformation_matrix.i"
+	@echo "... 05transformation_matrix.s"
+	@echo "... 06coordinate_system.o"
+	@echo "... 06coordinate_system.i"
+	@echo "... 06coordinate_system.s"
 	@echo "... __/glad/src/glad.o"
 	@echo "... __/glad/src/glad.i"
 	@echo "... __/glad/src/glad.s"

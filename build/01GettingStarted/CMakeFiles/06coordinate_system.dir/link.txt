@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/06coordinate_system.dir/06coordinate_system.cpp.o CMakeFiles/06coordinate_system.dir/__/glad/src/glad.c.o CMakeFiles/06coordinate_system.dir/__/stb_image.cpp.o  -o 06coordinate_system -Wl,-rpath,/usr/local/lib -rdynamic -lGLU /usr/local/lib/libGL.so /usr/local/lib/libglfw.so.3.3 -ldl 

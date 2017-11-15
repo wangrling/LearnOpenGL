@@ -168,30 +168,17 @@ glm_dummy/fast:
 .PHONY : glm_dummy/fast
 
 #=============================================================================
-# Target rules for targets named 03shader_program
+# Target rules for targets named 01hello_window_clear
 
 # Build rule for target.
-03shader_program: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 03shader_program
-.PHONY : 03shader_program
+01hello_window_clear: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 01hello_window_clear
+.PHONY : 01hello_window_clear
 
 # fast build rule for target.
-03shader_program/fast:
-	$(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/build
-.PHONY : 03shader_program/fast
-
-#=============================================================================
-# Target rules for targets named 02hello_triangle
-
-# Build rule for target.
-02hello_triangle: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 02hello_triangle
-.PHONY : 02hello_triangle
-
-# fast build rule for target.
-02hello_triangle/fast:
-	$(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/build
-.PHONY : 02hello_triangle/fast
+01hello_window_clear/fast:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/01hello_window_clear.dir/build.make 01GettingStarted/CMakeFiles/01hello_window_clear.dir/build
+.PHONY : 01hello_window_clear/fast
 
 #=============================================================================
 # Target rules for targets named 04textures_combined
@@ -207,17 +194,56 @@ glm_dummy/fast:
 .PHONY : 04textures_combined/fast
 
 #=============================================================================
-# Target rules for targets named 01hello_window_clear
+# Target rules for targets named 02hello_triangle
 
 # Build rule for target.
-01hello_window_clear: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 01hello_window_clear
-.PHONY : 01hello_window_clear
+02hello_triangle: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 02hello_triangle
+.PHONY : 02hello_triangle
 
 # fast build rule for target.
-01hello_window_clear/fast:
-	$(MAKE) -f 01GettingStarted/CMakeFiles/01hello_window_clear.dir/build.make 01GettingStarted/CMakeFiles/01hello_window_clear.dir/build
-.PHONY : 01hello_window_clear/fast
+02hello_triangle/fast:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/build
+.PHONY : 02hello_triangle/fast
+
+#=============================================================================
+# Target rules for targets named 03shader_program
+
+# Build rule for target.
+03shader_program: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 03shader_program
+.PHONY : 03shader_program
+
+# fast build rule for target.
+03shader_program/fast:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/build
+.PHONY : 03shader_program/fast
+
+#=============================================================================
+# Target rules for targets named 06coordinate_system
+
+# Build rule for target.
+06coordinate_system: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 06coordinate_system
+.PHONY : 06coordinate_system
+
+# fast build rule for target.
+06coordinate_system/fast:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/build
+.PHONY : 06coordinate_system/fast
+
+#=============================================================================
+# Target rules for targets named 05transformation_matrix
+
+# Build rule for target.
+05transformation_matrix: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 05transformation_matrix
+.PHONY : 05transformation_matrix
+
+# fast build rule for target.
+05transformation_matrix/fast:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build
+.PHONY : 05transformation_matrix/fast
 
 # Help Target
 help:
@@ -232,10 +258,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... glm_dummy"
-	@echo "... 03shader_program"
-	@echo "... 02hello_triangle"
-	@echo "... 04textures_combined"
 	@echo "... 01hello_window_clear"
+	@echo "... 04textures_combined"
+	@echo "... 02hello_triangle"
+	@echo "... 03shader_program"
+	@echo "... 06coordinate_system"
+	@echo "... 05transformation_matrix"
 .PHONY : help
 
 

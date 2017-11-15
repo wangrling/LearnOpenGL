@@ -73,8 +73,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/DependInfo.cmake"
-  "01GettingStarted/CMakeFiles/03shader_program.dir/DependInfo.cmake"
-  "01GettingStarted/CMakeFiles/02hello_triangle.dir/DependInfo.cmake"
-  "01GettingStarted/CMakeFiles/04textures_combined.dir/DependInfo.cmake"
   "01GettingStarted/CMakeFiles/01hello_window_clear.dir/DependInfo.cmake"
+  "01GettingStarted/CMakeFiles/04textures_combined.dir/DependInfo.cmake"
+  "01GettingStarted/CMakeFiles/02hello_triangle.dir/DependInfo.cmake"
+  "01GettingStarted/CMakeFiles/03shader_program.dir/DependInfo.cmake"
+  "01GettingStarted/CMakeFiles/06coordinate_system.dir/DependInfo.cmake"
+  "01GettingStarted/CMakeFiles/05transformation_matrix.dir/DependInfo.cmake"
   )

@@ -20,3 +20,9 @@ target_link_libraries(03shader_program ${OPENGL_LIBRARIES} glfw dl)
 
 add_executable(04textures_combined 04textures_combined.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
 target_link_libraries(04textures_combined ${OPENGL_LIBRARIES} glfw dl)
+
+add_executable(05transformation_matrix 05transformation_matrix.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
+target_link_libraries(05transformation_matrix ${OPENGL_LIBRARIES} glfw dl glm)
+
+add_executable(06coordinate_system 06coordinate_system.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
+target_link_libraries(06coordinate_system ${OPENGL_LIBRARIES} glfw dl glm)
