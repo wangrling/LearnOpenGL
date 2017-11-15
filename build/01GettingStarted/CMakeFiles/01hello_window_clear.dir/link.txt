@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/01hello_window_clear.dir/01hello_window_clear.cpp.o CMakeFiles/01hello_window_clear.dir/__/glad/src/glad.c.o  -o 01hello_window_clear -Wl,-rpath,/usr/local/lib -rdynamic -lGLU /usr/local/lib/libGL.so /usr/local/lib/libglfw.so.3.3 -ldl 
