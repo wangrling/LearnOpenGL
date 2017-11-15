@@ -168,6 +168,45 @@ glm_dummy/fast:
 .PHONY : glm_dummy/fast
 
 #=============================================================================
+# Target rules for targets named 03shader_program
+
+# Build rule for target.
+03shader_program: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 03shader_program
+.PHONY : 03shader_program
+
+# fast build rule for target.
+03shader_program/fast:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/build
+.PHONY : 03shader_program/fast
+
+#=============================================================================
+# Target rules for targets named 02hello_triangle
+
+# Build rule for target.
+02hello_triangle: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 02hello_triangle
+.PHONY : 02hello_triangle
+
+# fast build rule for target.
+02hello_triangle/fast:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/build
+.PHONY : 02hello_triangle/fast
+
+#=============================================================================
+# Target rules for targets named 04textures_combined
+
+# Build rule for target.
+04textures_combined: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 04textures_combined
+.PHONY : 04textures_combined
+
+# fast build rule for target.
+04textures_combined/fast:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/build
+.PHONY : 04textures_combined/fast
+
+#=============================================================================
 # Target rules for targets named 01hello_window_clear
 
 # Build rule for target.
@@ -193,6 +232,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... glm_dummy"
+	@echo "... 03shader_program"
+	@echo "... 02hello_triangle"
+	@echo "... 04textures_combined"
 	@echo "... 01hello_window_clear"
 .PHONY : help
 

@@ -14,8 +14,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.7.0-rc3/CMakeSystem.cmake"
   "../glm-0.9.8.5/./cmake/glm.pc.in"
   "../glm-0.9.8.5/CMakeLists.txt"
-  "../glm-0.9.8.5/cmake/CMakePackageConfigHelpers.cmake"
-  "../glm-0.9.8.5/cmake/GNUInstallDirs.cmake"
   "../glm-0.9.8.5/cmake/glmBuildConfig.cmake.in"
   "../glm-0.9.8.5/cmake/glmConfig.cmake.in"
   "../glm-0.9.8.5/glm/CMakeLists.txt"
@@ -34,6 +32,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.7/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/local/share/cmake-3.7/Modules/CMakeGenericSystem.cmake"
   "/usr/local/share/cmake-3.7/Modules/CMakeLanguageInformation.cmake"
+  "/usr/local/share/cmake-3.7/Modules/CMakePackageConfigHelpers.cmake"
   "/usr/local/share/cmake-3.7/Modules/CMakeParseArguments.cmake"
   "/usr/local/share/cmake-3.7/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/local/share/cmake-3.7/Modules/CMakeSystemSpecificInitialize.cmake"
@@ -43,6 +42,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.7/Modules/FindOpenGL.cmake"
   "/usr/local/share/cmake-3.7/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/local/share/cmake-3.7/Modules/FindPackageMessage.cmake"
+  "/usr/local/share/cmake-3.7/Modules/GNUInstallDirs.cmake"
   "/usr/local/share/cmake-3.7/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/local/share/cmake-3.7/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/local/share/cmake-3.7/Modules/Platform/Linux-GNU.cmake"
@@ -73,5 +73,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/DependInfo.cmake"
+  "01GettingStarted/CMakeFiles/03shader_program.dir/DependInfo.cmake"
+  "01GettingStarted/CMakeFiles/02hello_triangle.dir/DependInfo.cmake"
+  "01GettingStarted/CMakeFiles/04textures_combined.dir/DependInfo.cmake"
   "01GettingStarted/CMakeFiles/01hello_window_clear.dir/DependInfo.cmake"
   )

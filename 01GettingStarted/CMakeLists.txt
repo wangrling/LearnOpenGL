@@ -11,3 +11,12 @@ include_directories(${PROJECT_SOURCE_DIR}/glad/include)
 
 add_executable(01hello_window_clear 01hello_window_clear.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c)
 target_link_libraries(01hello_window_clear ${OPENGL_LIBRARIES} glfw dl)
+
+add_executable(02hello_triangle 02hello_triangle.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c)
+target_link_libraries(02hello_triangle ${OPENGL_LIBRARIES} glfw dl)
+
+add_executable(03shader_program 03shader_program.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c)
+target_link_libraries(03shader_program ${OPENGL_LIBRARIES} glfw dl)
+
+add_executable(04textures_combined 04textures_combined.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
+target_link_libraries(04textures_combined ${OPENGL_LIBRARIES} glfw dl)

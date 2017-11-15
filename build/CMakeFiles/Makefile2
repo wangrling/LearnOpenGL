@@ -105,7 +105,7 @@ glm-0.9.8.5/glm/preinstall:
 glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/all:
 	$(MAKE) -f glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/build.make glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/depend
 	$(MAKE) -f glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/build.make glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=4,5,6 "Built target glm_dummy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=14,15,16 "Built target glm_dummy"
 .PHONY : glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/all
 
 # Include target in all.
@@ -238,11 +238,17 @@ glm-0.9.8.5/test/gtx/preinstall:
 # Directory level rules for directory 01GettingStarted
 
 # Convenience name for "all" pass in the directory.
+01GettingStarted/all: 01GettingStarted/CMakeFiles/03shader_program.dir/all
+01GettingStarted/all: 01GettingStarted/CMakeFiles/02hello_triangle.dir/all
+01GettingStarted/all: 01GettingStarted/CMakeFiles/04textures_combined.dir/all
 01GettingStarted/all: 01GettingStarted/CMakeFiles/01hello_window_clear.dir/all
 
 .PHONY : 01GettingStarted/all
 
 # Convenience name for "clean" pass in the directory.
+01GettingStarted/clean: 01GettingStarted/CMakeFiles/03shader_program.dir/clean
+01GettingStarted/clean: 01GettingStarted/CMakeFiles/02hello_triangle.dir/clean
+01GettingStarted/clean: 01GettingStarted/CMakeFiles/04textures_combined.dir/clean
 01GettingStarted/clean: 01GettingStarted/CMakeFiles/01hello_window_clear.dir/clean
 
 .PHONY : 01GettingStarted/clean
@@ -251,6 +257,117 @@ glm-0.9.8.5/test/gtx/preinstall:
 01GettingStarted/preinstall:
 
 .PHONY : 01GettingStarted/preinstall
+
+#=============================================================================
+# Target rules for target 01GettingStarted/CMakeFiles/03shader_program.dir
+
+# All Build rule for target.
+01GettingStarted/CMakeFiles/03shader_program.dir/all:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/depend
+	$(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=7,8,9 "Built target 03shader_program"
+.PHONY : 01GettingStarted/CMakeFiles/03shader_program.dir/all
+
+# Include target in all.
+all: 01GettingStarted/CMakeFiles/03shader_program.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+01GettingStarted/CMakeFiles/03shader_program.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/03shader_program.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
+.PHONY : 01GettingStarted/CMakeFiles/03shader_program.dir/rule
+
+# Convenience name for target.
+03shader_program: 01GettingStarted/CMakeFiles/03shader_program.dir/rule
+
+.PHONY : 03shader_program
+
+# clean rule for target.
+01GettingStarted/CMakeFiles/03shader_program.dir/clean:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/clean
+.PHONY : 01GettingStarted/CMakeFiles/03shader_program.dir/clean
+
+# clean rule for target.
+clean: 01GettingStarted/CMakeFiles/03shader_program.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target 01GettingStarted/CMakeFiles/02hello_triangle.dir
+
+# All Build rule for target.
+01GettingStarted/CMakeFiles/02hello_triangle.dir/all:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/depend
+	$(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=4,5,6 "Built target 02hello_triangle"
+.PHONY : 01GettingStarted/CMakeFiles/02hello_triangle.dir/all
+
+# Include target in all.
+all: 01GettingStarted/CMakeFiles/02hello_triangle.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+01GettingStarted/CMakeFiles/02hello_triangle.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/02hello_triangle.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
+.PHONY : 01GettingStarted/CMakeFiles/02hello_triangle.dir/rule
+
+# Convenience name for target.
+02hello_triangle: 01GettingStarted/CMakeFiles/02hello_triangle.dir/rule
+
+.PHONY : 02hello_triangle
+
+# clean rule for target.
+01GettingStarted/CMakeFiles/02hello_triangle.dir/clean:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/clean
+.PHONY : 01GettingStarted/CMakeFiles/02hello_triangle.dir/clean
+
+# clean rule for target.
+clean: 01GettingStarted/CMakeFiles/02hello_triangle.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target 01GettingStarted/CMakeFiles/04textures_combined.dir
+
+# All Build rule for target.
+01GettingStarted/CMakeFiles/04textures_combined.dir/all:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/depend
+	$(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=10,11,12,13 "Built target 04textures_combined"
+.PHONY : 01GettingStarted/CMakeFiles/04textures_combined.dir/all
+
+# Include target in all.
+all: 01GettingStarted/CMakeFiles/04textures_combined.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+01GettingStarted/CMakeFiles/04textures_combined.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/04textures_combined.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
+.PHONY : 01GettingStarted/CMakeFiles/04textures_combined.dir/rule
+
+# Convenience name for target.
+04textures_combined: 01GettingStarted/CMakeFiles/04textures_combined.dir/rule
+
+.PHONY : 04textures_combined
+
+# clean rule for target.
+01GettingStarted/CMakeFiles/04textures_combined.dir/clean:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/clean
+.PHONY : 01GettingStarted/CMakeFiles/04textures_combined.dir/clean
+
+# clean rule for target.
+clean: 01GettingStarted/CMakeFiles/04textures_combined.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target 01GettingStarted/CMakeFiles/01hello_window_clear.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/02hello_triangle.dir/02hello_triangle.cpp.o CMakeFiles/02hello_triangle.dir/__/glad/src/glad.c.o  -o 02hello_triangle -Wl,-rpath,/usr/local/lib -rdynamic -lGLU /usr/local/lib/libGL.so /usr/local/lib/libglfw.so.3.3 -ldl 
