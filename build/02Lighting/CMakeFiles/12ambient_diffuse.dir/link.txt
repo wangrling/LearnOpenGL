@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/12ambient_diffuse.dir/12ambient_diffuse.cpp.o CMakeFiles/12ambient_diffuse.dir/__/glad/src/glad.c.o CMakeFiles/12ambient_diffuse.dir/__/stb_image.cpp.o  -o 12ambient_diffuse -Wl,-rpath,/usr/local/lib -rdynamic -lGLU /usr/local/lib/libGL.so /usr/local/lib/libglfw.so.3.3 -ldl 

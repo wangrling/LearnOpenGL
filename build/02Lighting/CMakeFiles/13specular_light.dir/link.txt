@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/13specular_light.dir/13specular_light.cpp.o CMakeFiles/13specular_light.dir/__/glad/src/glad.c.o CMakeFiles/13specular_light.dir/__/stb_image.cpp.o  -o 13specular_light -Wl,-rpath,/usr/local/lib -rdynamic -lGLU /usr/local/lib/libGL.so /usr/local/lib/libglfw.so.3.3 -ldl 

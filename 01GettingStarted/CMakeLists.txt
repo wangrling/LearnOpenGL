@@ -26,3 +26,15 @@ target_link_libraries(05transformation_matrix ${OPENGL_LIBRARIES} glfw dl glm)
 
 add_executable(06coordinate_system 06coordinate_system.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
 target_link_libraries(06coordinate_system ${OPENGL_LIBRARIES} glfw dl glm)
+
+add_executable(07camera_circle 07camera_circle.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
+target_link_libraries(07camera_circle ${OPENGL_LIBRARIES} glfw dl glm)
+
+add_executable(08camera_keyboard 08camera_keyboard.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
+target_link_libraries(08camera_keyboard ${OPENGL_LIBRARIES} glfw dl glm)
+
+add_executable(09camera_mouse_zoom 09camera_mouse_zoom.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
+target_link_libraries(09camera_mouse_zoom ${OPENGL_LIBRARIES} glfw dl glm)
+
+add_executable(10camera_using 10camera_using.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
+target_link_libraries(10camera_using ${OPENGL_LIBRARIES} glfw dl glm)

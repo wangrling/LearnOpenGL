@@ -6,3 +6,4 @@ project(opengl)
 add_subdirectory(${PROJECT_SOURCE_DIR}/glm-0.9.8.5)
 
 add_subdirectory(01GettingStarted)
+add_subdirectory(02Lighting)

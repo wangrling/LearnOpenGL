@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../01GettingStarted/CMakeLists.txt"
+  "../02Lighting/CMakeLists.txt"
   "../CMakeLists.txt"
   "CMakeFiles/3.7.0-rc3/CMakeCCompiler.cmake"
   "CMakeFiles/3.7.0-rc3/CMakeCXXCompiler.cmake"
@@ -68,6 +69,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "glm-0.9.8.5/test/gtc/CMakeFiles/CMakeDirectoryInformation.cmake"
   "glm-0.9.8.5/test/gtx/CMakeFiles/CMakeDirectoryInformation.cmake"
   "01GettingStarted/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "02Lighting/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -75,8 +77,16 @@ set(CMAKE_DEPEND_INFO_FILES
   "glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/DependInfo.cmake"
   "01GettingStarted/CMakeFiles/01hello_window_clear.dir/DependInfo.cmake"
   "01GettingStarted/CMakeFiles/04textures_combined.dir/DependInfo.cmake"
+  "01GettingStarted/CMakeFiles/07camera_circle.dir/DependInfo.cmake"
+  "01GettingStarted/CMakeFiles/10camera_using.dir/DependInfo.cmake"
   "01GettingStarted/CMakeFiles/02hello_triangle.dir/DependInfo.cmake"
   "01GettingStarted/CMakeFiles/03shader_program.dir/DependInfo.cmake"
   "01GettingStarted/CMakeFiles/06coordinate_system.dir/DependInfo.cmake"
   "01GettingStarted/CMakeFiles/05transformation_matrix.dir/DependInfo.cmake"
+  "01GettingStarted/CMakeFiles/08camera_keyboard.dir/DependInfo.cmake"
+  "01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/DependInfo.cmake"
+  "02Lighting/CMakeFiles/14materials.dir/DependInfo.cmake"
+  "02Lighting/CMakeFiles/13specular_light.dir/DependInfo.cmake"
+  "02Lighting/CMakeFiles/12ambient_diffuse.dir/DependInfo.cmake"
+  "02Lighting/CMakeFiles/11color_test.dir/DependInfo.cmake"
   )

@@ -67,27 +67,17 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -110,17 +100,27 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/local/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -185,6 +185,36 @@ depend:
 .PHONY : 04textures_combined/fast
 
 # Convenience name for target.
+01GettingStarted/CMakeFiles/07camera_circle.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/07camera_circle.dir/rule
+.PHONY : 01GettingStarted/CMakeFiles/07camera_circle.dir/rule
+
+# Convenience name for target.
+07camera_circle: 01GettingStarted/CMakeFiles/07camera_circle.dir/rule
+
+.PHONY : 07camera_circle
+
+# fast build rule for target.
+07camera_circle/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/07camera_circle.dir/build.make 01GettingStarted/CMakeFiles/07camera_circle.dir/build
+.PHONY : 07camera_circle/fast
+
+# Convenience name for target.
+01GettingStarted/CMakeFiles/10camera_using.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/10camera_using.dir/rule
+.PHONY : 01GettingStarted/CMakeFiles/10camera_using.dir/rule
+
+# Convenience name for target.
+10camera_using: 01GettingStarted/CMakeFiles/10camera_using.dir/rule
+
+.PHONY : 10camera_using
+
+# fast build rule for target.
+10camera_using/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/build
+.PHONY : 10camera_using/fast
+
+# Convenience name for target.
 01GettingStarted/CMakeFiles/02hello_triangle.dir/rule:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/02hello_triangle.dir/rule
 .PHONY : 01GettingStarted/CMakeFiles/02hello_triangle.dir/rule
@@ -243,6 +273,36 @@ depend:
 05transformation_matrix/fast:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build
 .PHONY : 05transformation_matrix/fast
+
+# Convenience name for target.
+01GettingStarted/CMakeFiles/08camera_keyboard.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/08camera_keyboard.dir/rule
+.PHONY : 01GettingStarted/CMakeFiles/08camera_keyboard.dir/rule
+
+# Convenience name for target.
+08camera_keyboard: 01GettingStarted/CMakeFiles/08camera_keyboard.dir/rule
+
+.PHONY : 08camera_keyboard
+
+# fast build rule for target.
+08camera_keyboard/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build.make 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build
+.PHONY : 08camera_keyboard/fast
+
+# Convenience name for target.
+01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/rule
+.PHONY : 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/rule
+
+# Convenience name for target.
+09camera_mouse_zoom: 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/rule
+
+.PHONY : 09camera_mouse_zoom
+
+# fast build rule for target.
+09camera_mouse_zoom/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build.make 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build
+.PHONY : 09camera_mouse_zoom/fast
 
 01hello_window_clear.o: 01hello_window_clear.cpp.o
 
@@ -406,6 +466,114 @@ depend:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/06coordinate_system.cpp.s
 .PHONY : 06coordinate_system.cpp.s
 
+07camera_circle.o: 07camera_circle.cpp.o
+
+.PHONY : 07camera_circle.o
+
+# target to build an object file
+07camera_circle.cpp.o:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/07camera_circle.dir/build.make 01GettingStarted/CMakeFiles/07camera_circle.dir/07camera_circle.cpp.o
+.PHONY : 07camera_circle.cpp.o
+
+07camera_circle.i: 07camera_circle.cpp.i
+
+.PHONY : 07camera_circle.i
+
+# target to preprocess a source file
+07camera_circle.cpp.i:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/07camera_circle.dir/build.make 01GettingStarted/CMakeFiles/07camera_circle.dir/07camera_circle.cpp.i
+.PHONY : 07camera_circle.cpp.i
+
+07camera_circle.s: 07camera_circle.cpp.s
+
+.PHONY : 07camera_circle.s
+
+# target to generate assembly for a file
+07camera_circle.cpp.s:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/07camera_circle.dir/build.make 01GettingStarted/CMakeFiles/07camera_circle.dir/07camera_circle.cpp.s
+.PHONY : 07camera_circle.cpp.s
+
+08camera_keyboard.o: 08camera_keyboard.cpp.o
+
+.PHONY : 08camera_keyboard.o
+
+# target to build an object file
+08camera_keyboard.cpp.o:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build.make 01GettingStarted/CMakeFiles/08camera_keyboard.dir/08camera_keyboard.cpp.o
+.PHONY : 08camera_keyboard.cpp.o
+
+08camera_keyboard.i: 08camera_keyboard.cpp.i
+
+.PHONY : 08camera_keyboard.i
+
+# target to preprocess a source file
+08camera_keyboard.cpp.i:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build.make 01GettingStarted/CMakeFiles/08camera_keyboard.dir/08camera_keyboard.cpp.i
+.PHONY : 08camera_keyboard.cpp.i
+
+08camera_keyboard.s: 08camera_keyboard.cpp.s
+
+.PHONY : 08camera_keyboard.s
+
+# target to generate assembly for a file
+08camera_keyboard.cpp.s:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build.make 01GettingStarted/CMakeFiles/08camera_keyboard.dir/08camera_keyboard.cpp.s
+.PHONY : 08camera_keyboard.cpp.s
+
+09camera_mouse_zoom.o: 09camera_mouse_zoom.cpp.o
+
+.PHONY : 09camera_mouse_zoom.o
+
+# target to build an object file
+09camera_mouse_zoom.cpp.o:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build.make 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/09camera_mouse_zoom.cpp.o
+.PHONY : 09camera_mouse_zoom.cpp.o
+
+09camera_mouse_zoom.i: 09camera_mouse_zoom.cpp.i
+
+.PHONY : 09camera_mouse_zoom.i
+
+# target to preprocess a source file
+09camera_mouse_zoom.cpp.i:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build.make 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/09camera_mouse_zoom.cpp.i
+.PHONY : 09camera_mouse_zoom.cpp.i
+
+09camera_mouse_zoom.s: 09camera_mouse_zoom.cpp.s
+
+.PHONY : 09camera_mouse_zoom.s
+
+# target to generate assembly for a file
+09camera_mouse_zoom.cpp.s:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build.make 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/09camera_mouse_zoom.cpp.s
+.PHONY : 09camera_mouse_zoom.cpp.s
+
+10camera_using.o: 10camera_using.cpp.o
+
+.PHONY : 10camera_using.o
+
+# target to build an object file
+10camera_using.cpp.o:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/10camera_using.cpp.o
+.PHONY : 10camera_using.cpp.o
+
+10camera_using.i: 10camera_using.cpp.i
+
+.PHONY : 10camera_using.i
+
+# target to preprocess a source file
+10camera_using.cpp.i:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/10camera_using.cpp.i
+.PHONY : 10camera_using.cpp.i
+
+10camera_using.s: 10camera_using.cpp.s
+
+.PHONY : 10camera_using.s
+
+# target to generate assembly for a file
+10camera_using.cpp.s:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/10camera_using.cpp.s
+.PHONY : 10camera_using.cpp.s
+
 __/glad/src/glad.o: __/glad/src/glad.c.o
 
 .PHONY : __/glad/src/glad.o
@@ -414,10 +582,14 @@ __/glad/src/glad.o: __/glad/src/glad.c.o
 __/glad/src/glad.c.o:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/01hello_window_clear.dir/build.make 01GettingStarted/CMakeFiles/01hello_window_clear.dir/__/glad/src/glad.c.o
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/07camera_circle.dir/build.make 01GettingStarted/CMakeFiles/07camera_circle.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/__/glad/src/glad.c.o
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/__/glad/src/glad.c.o
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/__/glad/src/glad.c.o
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/__/glad/src/glad.c.o
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build.make 01GettingStarted/CMakeFiles/08camera_keyboard.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build.make 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/__/glad/src/glad.c.o
 .PHONY : __/glad/src/glad.c.o
 
 __/glad/src/glad.i: __/glad/src/glad.c.i
@@ -428,10 +600,14 @@ __/glad/src/glad.i: __/glad/src/glad.c.i
 __/glad/src/glad.c.i:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/01hello_window_clear.dir/build.make 01GettingStarted/CMakeFiles/01hello_window_clear.dir/__/glad/src/glad.c.i
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/07camera_circle.dir/build.make 01GettingStarted/CMakeFiles/07camera_circle.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/__/glad/src/glad.c.i
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/__/glad/src/glad.c.i
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/__/glad/src/glad.c.i
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/__/glad/src/glad.c.i
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build.make 01GettingStarted/CMakeFiles/08camera_keyboard.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build.make 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/__/glad/src/glad.c.i
 .PHONY : __/glad/src/glad.c.i
 
 __/glad/src/glad.s: __/glad/src/glad.c.s
@@ -442,10 +618,14 @@ __/glad/src/glad.s: __/glad/src/glad.c.s
 __/glad/src/glad.c.s:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/01hello_window_clear.dir/build.make 01GettingStarted/CMakeFiles/01hello_window_clear.dir/__/glad/src/glad.c.s
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/07camera_circle.dir/build.make 01GettingStarted/CMakeFiles/07camera_circle.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/__/glad/src/glad.c.s
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/02hello_triangle.dir/build.make 01GettingStarted/CMakeFiles/02hello_triangle.dir/__/glad/src/glad.c.s
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/03shader_program.dir/build.make 01GettingStarted/CMakeFiles/03shader_program.dir/__/glad/src/glad.c.s
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/__/glad/src/glad.c.s
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build.make 01GettingStarted/CMakeFiles/08camera_keyboard.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build.make 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/__/glad/src/glad.c.s
 .PHONY : __/glad/src/glad.c.s
 
 __/stb_image.o: __/stb_image.cpp.o
@@ -455,8 +635,12 @@ __/stb_image.o: __/stb_image.cpp.o
 # target to build an object file
 __/stb_image.cpp.o:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/__/stb_image.cpp.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/07camera_circle.dir/build.make 01GettingStarted/CMakeFiles/07camera_circle.dir/__/stb_image.cpp.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/__/stb_image.cpp.o
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/__/stb_image.cpp.o
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/__/stb_image.cpp.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build.make 01GettingStarted/CMakeFiles/08camera_keyboard.dir/__/stb_image.cpp.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build.make 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/__/stb_image.cpp.o
 .PHONY : __/stb_image.cpp.o
 
 __/stb_image.i: __/stb_image.cpp.i
@@ -466,8 +650,12 @@ __/stb_image.i: __/stb_image.cpp.i
 # target to preprocess a source file
 __/stb_image.cpp.i:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/__/stb_image.cpp.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/07camera_circle.dir/build.make 01GettingStarted/CMakeFiles/07camera_circle.dir/__/stb_image.cpp.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/__/stb_image.cpp.i
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/__/stb_image.cpp.i
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/__/stb_image.cpp.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build.make 01GettingStarted/CMakeFiles/08camera_keyboard.dir/__/stb_image.cpp.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build.make 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/__/stb_image.cpp.i
 .PHONY : __/stb_image.cpp.i
 
 __/stb_image.s: __/stb_image.cpp.s
@@ -477,8 +665,12 @@ __/stb_image.s: __/stb_image.cpp.s
 # target to generate assembly for a file
 __/stb_image.cpp.s:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/04textures_combined.dir/build.make 01GettingStarted/CMakeFiles/04textures_combined.dir/__/stb_image.cpp.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/07camera_circle.dir/build.make 01GettingStarted/CMakeFiles/07camera_circle.dir/__/stb_image.cpp.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/__/stb_image.cpp.s
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/06coordinate_system.dir/build.make 01GettingStarted/CMakeFiles/06coordinate_system.dir/__/stb_image.cpp.s
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/__/stb_image.cpp.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build.make 01GettingStarted/CMakeFiles/08camera_keyboard.dir/__/stb_image.cpp.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build.make 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/__/stb_image.cpp.s
 .PHONY : __/stb_image.cpp.s
 
 # Help Target
@@ -488,17 +680,21 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/local"
+	@echo "... install"
+	@echo "... install/strip"
+	@echo "... list_install_components"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... 01hello_window_clear"
 	@echo "... 04textures_combined"
+	@echo "... 07camera_circle"
+	@echo "... 10camera_using"
 	@echo "... 02hello_triangle"
 	@echo "... 03shader_program"
 	@echo "... 06coordinate_system"
 	@echo "... 05transformation_matrix"
-	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... install"
+	@echo "... 08camera_keyboard"
+	@echo "... 09camera_mouse_zoom"
 	@echo "... 01hello_window_clear.o"
 	@echo "... 01hello_window_clear.i"
 	@echo "... 01hello_window_clear.s"
@@ -517,6 +713,18 @@ help:
 	@echo "... 06coordinate_system.o"
 	@echo "... 06coordinate_system.i"
 	@echo "... 06coordinate_system.s"
+	@echo "... 07camera_circle.o"
+	@echo "... 07camera_circle.i"
+	@echo "... 07camera_circle.s"
+	@echo "... 08camera_keyboard.o"
+	@echo "... 08camera_keyboard.i"
+	@echo "... 08camera_keyboard.s"
+	@echo "... 09camera_mouse_zoom.o"
+	@echo "... 09camera_mouse_zoom.i"
+	@echo "... 09camera_mouse_zoom.s"
+	@echo "... 10camera_using.o"
+	@echo "... 10camera_using.i"
+	@echo "... 10camera_using.s"
 	@echo "... __/glad/src/glad.o"
 	@echo "... __/glad/src/glad.i"
 	@echo "... __/glad/src/glad.s"

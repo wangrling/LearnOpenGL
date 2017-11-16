@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/11color_test.dir/11color_test.cpp.o CMakeFiles/11color_test.dir/__/glad/src/glad.c.o CMakeFiles/11color_test.dir/__/stb_image.cpp.o  -o 11color_test -Wl,-rpath,/usr/local/lib -rdynamic -lGLU /usr/local/lib/libGL.so /usr/local/lib/libglfw.so.3.3 -ldl 

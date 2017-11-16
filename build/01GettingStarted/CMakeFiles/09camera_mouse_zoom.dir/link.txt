@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/09camera_mouse_zoom.dir/09camera_mouse_zoom.cpp.o CMakeFiles/09camera_mouse_zoom.dir/__/glad/src/glad.c.o CMakeFiles/09camera_mouse_zoom.dir/__/stb_image.cpp.o  -o 09camera_mouse_zoom -Wl,-rpath,/usr/local/lib -rdynamic -lGLU /usr/local/lib/libGL.so /usr/local/lib/libglfw.so.3.3 -ldl 

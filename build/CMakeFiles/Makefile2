@@ -105,7 +105,7 @@ glm-0.9.8.5/glm/preinstall:
 glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/all:
 	$(MAKE) -f glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/build.make glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/depend
 	$(MAKE) -f glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/build.make glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=22,23,24 "Built target glm_dummy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=54,55,56 "Built target glm_dummy"
 .PHONY : glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/all
 
 # Include target in all.
@@ -240,20 +240,28 @@ glm-0.9.8.5/test/gtx/preinstall:
 # Convenience name for "all" pass in the directory.
 01GettingStarted/all: 01GettingStarted/CMakeFiles/01hello_window_clear.dir/all
 01GettingStarted/all: 01GettingStarted/CMakeFiles/04textures_combined.dir/all
+01GettingStarted/all: 01GettingStarted/CMakeFiles/07camera_circle.dir/all
+01GettingStarted/all: 01GettingStarted/CMakeFiles/10camera_using.dir/all
 01GettingStarted/all: 01GettingStarted/CMakeFiles/02hello_triangle.dir/all
 01GettingStarted/all: 01GettingStarted/CMakeFiles/03shader_program.dir/all
 01GettingStarted/all: 01GettingStarted/CMakeFiles/06coordinate_system.dir/all
 01GettingStarted/all: 01GettingStarted/CMakeFiles/05transformation_matrix.dir/all
+01GettingStarted/all: 01GettingStarted/CMakeFiles/08camera_keyboard.dir/all
+01GettingStarted/all: 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/all
 
 .PHONY : 01GettingStarted/all
 
 # Convenience name for "clean" pass in the directory.
 01GettingStarted/clean: 01GettingStarted/CMakeFiles/01hello_window_clear.dir/clean
 01GettingStarted/clean: 01GettingStarted/CMakeFiles/04textures_combined.dir/clean
+01GettingStarted/clean: 01GettingStarted/CMakeFiles/07camera_circle.dir/clean
+01GettingStarted/clean: 01GettingStarted/CMakeFiles/10camera_using.dir/clean
 01GettingStarted/clean: 01GettingStarted/CMakeFiles/02hello_triangle.dir/clean
 01GettingStarted/clean: 01GettingStarted/CMakeFiles/03shader_program.dir/clean
 01GettingStarted/clean: 01GettingStarted/CMakeFiles/06coordinate_system.dir/clean
 01GettingStarted/clean: 01GettingStarted/CMakeFiles/05transformation_matrix.dir/clean
+01GettingStarted/clean: 01GettingStarted/CMakeFiles/08camera_keyboard.dir/clean
+01GettingStarted/clean: 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/clean
 
 .PHONY : 01GettingStarted/clean
 
@@ -333,6 +341,80 @@ all: 01GettingStarted/CMakeFiles/04textures_combined.dir/all
 
 # clean rule for target.
 clean: 01GettingStarted/CMakeFiles/04textures_combined.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target 01GettingStarted/CMakeFiles/07camera_circle.dir
+
+# All Build rule for target.
+01GettingStarted/CMakeFiles/07camera_circle.dir/all:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/07camera_circle.dir/build.make 01GettingStarted/CMakeFiles/07camera_circle.dir/depend
+	$(MAKE) -f 01GettingStarted/CMakeFiles/07camera_circle.dir/build.make 01GettingStarted/CMakeFiles/07camera_circle.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=22,23,24,25 "Built target 07camera_circle"
+.PHONY : 01GettingStarted/CMakeFiles/07camera_circle.dir/all
+
+# Include target in all.
+all: 01GettingStarted/CMakeFiles/07camera_circle.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+01GettingStarted/CMakeFiles/07camera_circle.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/07camera_circle.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
+.PHONY : 01GettingStarted/CMakeFiles/07camera_circle.dir/rule
+
+# Convenience name for target.
+07camera_circle: 01GettingStarted/CMakeFiles/07camera_circle.dir/rule
+
+.PHONY : 07camera_circle
+
+# clean rule for target.
+01GettingStarted/CMakeFiles/07camera_circle.dir/clean:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/07camera_circle.dir/build.make 01GettingStarted/CMakeFiles/07camera_circle.dir/clean
+.PHONY : 01GettingStarted/CMakeFiles/07camera_circle.dir/clean
+
+# clean rule for target.
+clean: 01GettingStarted/CMakeFiles/07camera_circle.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target 01GettingStarted/CMakeFiles/10camera_using.dir
+
+# All Build rule for target.
+01GettingStarted/CMakeFiles/10camera_using.dir/all:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/depend
+	$(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=34,35,36,37 "Built target 10camera_using"
+.PHONY : 01GettingStarted/CMakeFiles/10camera_using.dir/all
+
+# Include target in all.
+all: 01GettingStarted/CMakeFiles/10camera_using.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+01GettingStarted/CMakeFiles/10camera_using.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/10camera_using.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
+.PHONY : 01GettingStarted/CMakeFiles/10camera_using.dir/rule
+
+# Convenience name for target.
+10camera_using: 01GettingStarted/CMakeFiles/10camera_using.dir/rule
+
+.PHONY : 10camera_using
+
+# clean rule for target.
+01GettingStarted/CMakeFiles/10camera_using.dir/clean:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/clean
+.PHONY : 01GettingStarted/CMakeFiles/10camera_using.dir/clean
+
+# clean rule for target.
+clean: 01GettingStarted/CMakeFiles/10camera_using.dir/clean
 
 .PHONY : clean
 
@@ -481,6 +563,252 @@ all: 01GettingStarted/CMakeFiles/05transformation_matrix.dir/all
 
 # clean rule for target.
 clean: 01GettingStarted/CMakeFiles/05transformation_matrix.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target 01GettingStarted/CMakeFiles/08camera_keyboard.dir
+
+# All Build rule for target.
+01GettingStarted/CMakeFiles/08camera_keyboard.dir/all:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build.make 01GettingStarted/CMakeFiles/08camera_keyboard.dir/depend
+	$(MAKE) -f 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build.make 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=26,27,28,29 "Built target 08camera_keyboard"
+.PHONY : 01GettingStarted/CMakeFiles/08camera_keyboard.dir/all
+
+# Include target in all.
+all: 01GettingStarted/CMakeFiles/08camera_keyboard.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+01GettingStarted/CMakeFiles/08camera_keyboard.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/08camera_keyboard.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
+.PHONY : 01GettingStarted/CMakeFiles/08camera_keyboard.dir/rule
+
+# Convenience name for target.
+08camera_keyboard: 01GettingStarted/CMakeFiles/08camera_keyboard.dir/rule
+
+.PHONY : 08camera_keyboard
+
+# clean rule for target.
+01GettingStarted/CMakeFiles/08camera_keyboard.dir/clean:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build.make 01GettingStarted/CMakeFiles/08camera_keyboard.dir/clean
+.PHONY : 01GettingStarted/CMakeFiles/08camera_keyboard.dir/clean
+
+# clean rule for target.
+clean: 01GettingStarted/CMakeFiles/08camera_keyboard.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir
+
+# All Build rule for target.
+01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/all:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build.make 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/depend
+	$(MAKE) -f 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build.make 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=30,31,32,33 "Built target 09camera_mouse_zoom"
+.PHONY : 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/all
+
+# Include target in all.
+all: 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
+.PHONY : 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/rule
+
+# Convenience name for target.
+09camera_mouse_zoom: 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/rule
+
+.PHONY : 09camera_mouse_zoom
+
+# clean rule for target.
+01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/clean:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build.make 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/clean
+.PHONY : 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/clean
+
+# clean rule for target.
+clean: 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory 02Lighting
+
+# Convenience name for "all" pass in the directory.
+02Lighting/all: 02Lighting/CMakeFiles/14materials.dir/all
+02Lighting/all: 02Lighting/CMakeFiles/13specular_light.dir/all
+02Lighting/all: 02Lighting/CMakeFiles/12ambient_diffuse.dir/all
+02Lighting/all: 02Lighting/CMakeFiles/11color_test.dir/all
+
+.PHONY : 02Lighting/all
+
+# Convenience name for "clean" pass in the directory.
+02Lighting/clean: 02Lighting/CMakeFiles/14materials.dir/clean
+02Lighting/clean: 02Lighting/CMakeFiles/13specular_light.dir/clean
+02Lighting/clean: 02Lighting/CMakeFiles/12ambient_diffuse.dir/clean
+02Lighting/clean: 02Lighting/CMakeFiles/11color_test.dir/clean
+
+.PHONY : 02Lighting/clean
+
+# Convenience name for "preinstall" pass in the directory.
+02Lighting/preinstall:
+
+.PHONY : 02Lighting/preinstall
+
+#=============================================================================
+# Target rules for target 02Lighting/CMakeFiles/14materials.dir
+
+# All Build rule for target.
+02Lighting/CMakeFiles/14materials.dir/all:
+	$(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/depend
+	$(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=50,51,52,53 "Built target 14materials"
+.PHONY : 02Lighting/CMakeFiles/14materials.dir/all
+
+# Include target in all.
+all: 02Lighting/CMakeFiles/14materials.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+02Lighting/CMakeFiles/14materials.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/14materials.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
+.PHONY : 02Lighting/CMakeFiles/14materials.dir/rule
+
+# Convenience name for target.
+14materials: 02Lighting/CMakeFiles/14materials.dir/rule
+
+.PHONY : 14materials
+
+# clean rule for target.
+02Lighting/CMakeFiles/14materials.dir/clean:
+	$(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/clean
+.PHONY : 02Lighting/CMakeFiles/14materials.dir/clean
+
+# clean rule for target.
+clean: 02Lighting/CMakeFiles/14materials.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target 02Lighting/CMakeFiles/13specular_light.dir
+
+# All Build rule for target.
+02Lighting/CMakeFiles/13specular_light.dir/all:
+	$(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/depend
+	$(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=46,47,48,49 "Built target 13specular_light"
+.PHONY : 02Lighting/CMakeFiles/13specular_light.dir/all
+
+# Include target in all.
+all: 02Lighting/CMakeFiles/13specular_light.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+02Lighting/CMakeFiles/13specular_light.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/13specular_light.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
+.PHONY : 02Lighting/CMakeFiles/13specular_light.dir/rule
+
+# Convenience name for target.
+13specular_light: 02Lighting/CMakeFiles/13specular_light.dir/rule
+
+.PHONY : 13specular_light
+
+# clean rule for target.
+02Lighting/CMakeFiles/13specular_light.dir/clean:
+	$(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/clean
+.PHONY : 02Lighting/CMakeFiles/13specular_light.dir/clean
+
+# clean rule for target.
+clean: 02Lighting/CMakeFiles/13specular_light.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target 02Lighting/CMakeFiles/12ambient_diffuse.dir
+
+# All Build rule for target.
+02Lighting/CMakeFiles/12ambient_diffuse.dir/all:
+	$(MAKE) -f 02Lighting/CMakeFiles/12ambient_diffuse.dir/build.make 02Lighting/CMakeFiles/12ambient_diffuse.dir/depend
+	$(MAKE) -f 02Lighting/CMakeFiles/12ambient_diffuse.dir/build.make 02Lighting/CMakeFiles/12ambient_diffuse.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=42,43,44,45 "Built target 12ambient_diffuse"
+.PHONY : 02Lighting/CMakeFiles/12ambient_diffuse.dir/all
+
+# Include target in all.
+all: 02Lighting/CMakeFiles/12ambient_diffuse.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+02Lighting/CMakeFiles/12ambient_diffuse.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/12ambient_diffuse.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
+.PHONY : 02Lighting/CMakeFiles/12ambient_diffuse.dir/rule
+
+# Convenience name for target.
+12ambient_diffuse: 02Lighting/CMakeFiles/12ambient_diffuse.dir/rule
+
+.PHONY : 12ambient_diffuse
+
+# clean rule for target.
+02Lighting/CMakeFiles/12ambient_diffuse.dir/clean:
+	$(MAKE) -f 02Lighting/CMakeFiles/12ambient_diffuse.dir/build.make 02Lighting/CMakeFiles/12ambient_diffuse.dir/clean
+.PHONY : 02Lighting/CMakeFiles/12ambient_diffuse.dir/clean
+
+# clean rule for target.
+clean: 02Lighting/CMakeFiles/12ambient_diffuse.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target 02Lighting/CMakeFiles/11color_test.dir
+
+# All Build rule for target.
+02Lighting/CMakeFiles/11color_test.dir/all:
+	$(MAKE) -f 02Lighting/CMakeFiles/11color_test.dir/build.make 02Lighting/CMakeFiles/11color_test.dir/depend
+	$(MAKE) -f 02Lighting/CMakeFiles/11color_test.dir/build.make 02Lighting/CMakeFiles/11color_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=38,39,40,41 "Built target 11color_test"
+.PHONY : 02Lighting/CMakeFiles/11color_test.dir/all
+
+# Include target in all.
+all: 02Lighting/CMakeFiles/11color_test.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+02Lighting/CMakeFiles/11color_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/11color_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
+.PHONY : 02Lighting/CMakeFiles/11color_test.dir/rule
+
+# Convenience name for target.
+11color_test: 02Lighting/CMakeFiles/11color_test.dir/rule
+
+.PHONY : 11color_test
+
+# clean rule for target.
+02Lighting/CMakeFiles/11color_test.dir/clean:
+	$(MAKE) -f 02Lighting/CMakeFiles/11color_test.dir/build.make 02Lighting/CMakeFiles/11color_test.dir/clean
+.PHONY : 02Lighting/CMakeFiles/11color_test.dir/clean
+
+# clean rule for target.
+clean: 02Lighting/CMakeFiles/11color_test.dir/clean
 
 .PHONY : clean
 

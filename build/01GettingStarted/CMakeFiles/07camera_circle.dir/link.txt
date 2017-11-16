@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/07camera_circle.dir/07camera_circle.cpp.o CMakeFiles/07camera_circle.dir/__/glad/src/glad.c.o CMakeFiles/07camera_circle.dir/__/stb_image.cpp.o  -o 07camera_circle -Wl,-rpath,/usr/local/lib -rdynamic -lGLU /usr/local/lib/libGL.so /usr/local/lib/libglfw.so.3.3 -ldl 

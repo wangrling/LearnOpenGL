@@ -36,6 +36,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/wang/github/LearnOpenGL/build/glm-0.9.8.5/cmake_install.cmake")
   include("/home/wang/github/LearnOpenGL/build/01GettingStarted/cmake_install.cmake")
+  include("/home/wang/github/LearnOpenGL/build/02Lighting/cmake_install.cmake")
 
 endif()
 

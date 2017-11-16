@@ -194,6 +194,32 @@ glm_dummy/fast:
 .PHONY : 04textures_combined/fast
 
 #=============================================================================
+# Target rules for targets named 07camera_circle
+
+# Build rule for target.
+07camera_circle: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 07camera_circle
+.PHONY : 07camera_circle
+
+# fast build rule for target.
+07camera_circle/fast:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/07camera_circle.dir/build.make 01GettingStarted/CMakeFiles/07camera_circle.dir/build
+.PHONY : 07camera_circle/fast
+
+#=============================================================================
+# Target rules for targets named 10camera_using
+
+# Build rule for target.
+10camera_using: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 10camera_using
+.PHONY : 10camera_using
+
+# fast build rule for target.
+10camera_using/fast:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/build
+.PHONY : 10camera_using/fast
+
+#=============================================================================
 # Target rules for targets named 02hello_triangle
 
 # Build rule for target.
@@ -245,6 +271,84 @@ glm_dummy/fast:
 	$(MAKE) -f 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build.make 01GettingStarted/CMakeFiles/05transformation_matrix.dir/build
 .PHONY : 05transformation_matrix/fast
 
+#=============================================================================
+# Target rules for targets named 08camera_keyboard
+
+# Build rule for target.
+08camera_keyboard: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 08camera_keyboard
+.PHONY : 08camera_keyboard
+
+# fast build rule for target.
+08camera_keyboard/fast:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build.make 01GettingStarted/CMakeFiles/08camera_keyboard.dir/build
+.PHONY : 08camera_keyboard/fast
+
+#=============================================================================
+# Target rules for targets named 09camera_mouse_zoom
+
+# Build rule for target.
+09camera_mouse_zoom: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 09camera_mouse_zoom
+.PHONY : 09camera_mouse_zoom
+
+# fast build rule for target.
+09camera_mouse_zoom/fast:
+	$(MAKE) -f 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build.make 01GettingStarted/CMakeFiles/09camera_mouse_zoom.dir/build
+.PHONY : 09camera_mouse_zoom/fast
+
+#=============================================================================
+# Target rules for targets named 14materials
+
+# Build rule for target.
+14materials: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 14materials
+.PHONY : 14materials
+
+# fast build rule for target.
+14materials/fast:
+	$(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/build
+.PHONY : 14materials/fast
+
+#=============================================================================
+# Target rules for targets named 13specular_light
+
+# Build rule for target.
+13specular_light: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 13specular_light
+.PHONY : 13specular_light
+
+# fast build rule for target.
+13specular_light/fast:
+	$(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/build
+.PHONY : 13specular_light/fast
+
+#=============================================================================
+# Target rules for targets named 12ambient_diffuse
+
+# Build rule for target.
+12ambient_diffuse: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 12ambient_diffuse
+.PHONY : 12ambient_diffuse
+
+# fast build rule for target.
+12ambient_diffuse/fast:
+	$(MAKE) -f 02Lighting/CMakeFiles/12ambient_diffuse.dir/build.make 02Lighting/CMakeFiles/12ambient_diffuse.dir/build
+.PHONY : 12ambient_diffuse/fast
+
+#=============================================================================
+# Target rules for targets named 11color_test
+
+# Build rule for target.
+11color_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 11color_test
+.PHONY : 11color_test
+
+# fast build rule for target.
+11color_test/fast:
+	$(MAKE) -f 02Lighting/CMakeFiles/11color_test.dir/build.make 02Lighting/CMakeFiles/11color_test.dir/build
+.PHONY : 11color_test/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -260,10 +364,18 @@ help:
 	@echo "... glm_dummy"
 	@echo "... 01hello_window_clear"
 	@echo "... 04textures_combined"
+	@echo "... 07camera_circle"
+	@echo "... 10camera_using"
 	@echo "... 02hello_triangle"
 	@echo "... 03shader_program"
 	@echo "... 06coordinate_system"
 	@echo "... 05transformation_matrix"
+	@echo "... 08camera_keyboard"
+	@echo "... 09camera_mouse_zoom"
+	@echo "... 14materials"
+	@echo "... 13specular_light"
+	@echo "... 12ambient_diffuse"
+	@echo "... 11color_test"
 .PHONY : help
 
 
