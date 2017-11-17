@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-..//CameraDirector.h
+..//header/camera.h
 glad/glad.h
 -
 glm/glm.hpp
@@ -16,7 +16,7 @@ glm/gtc/matrix_transform.hpp
 vector
 -
 
-..//model.h
+..//header/model.h
 glad/glad.h
 -
 glm/glm.hpp
@@ -32,9 +32,9 @@ assimp/scene.h
 assimp/postprocess.h
 -
 shader.h
-../shader.h
+../header/shader.h
 mesh.h
-../mesh.h
+../header/mesh.h
 string
 -
 fstream
@@ -48,7 +48,7 @@ map
 vector
 -
 
-..//shader.h
+..//header/shader.h
 glad/glad.h
 -
 glm/glm.hpp
@@ -912,7 +912,7 @@ detail/type_vec4.hpp
 detail/func_vector_relational.hpp
 ../glm-0.9.8.5/glm/detail/func_vector_relational.hpp
 
-../mesh.h
+../header/mesh.h
 glad/glad.h
 -
 assimp/Importer.hpp
@@ -922,7 +922,7 @@ glm/glm.hpp
 glm/gtc/matrix_transform.hpp
 -
 shader.h
-../shader.h
+../header/shader.h
 string
 -
 fstream
@@ -932,6 +932,20 @@ sstream
 iostream
 -
 vector
+-
+
+../header/shader.h
+glad/glad.h
+-
+glm/glm.hpp
+-
+string
+-
+fstream
+-
+sstream
+-
+iostream
 -
 
 /home/wang/github/LearnOpenGL/03ModelLoading/22nanosuit_loading.cpp
@@ -945,12 +959,12 @@ glm/gtc/matrix_transform.hpp
 -
 glm/gtc/type_ptr.hpp
 -
-shader.h
-/home/wang/github/LearnOpenGL/03ModelLoading/shader.h
-CameraDirector.h
-/home/wang/github/LearnOpenGL/03ModelLoading/CameraDirector.h
-model.h
-/home/wang/github/LearnOpenGL/03ModelLoading/model.h
+header/shader.h
+/home/wang/github/LearnOpenGL/03ModelLoading/header/shader.h
+header/camera.h
+/home/wang/github/LearnOpenGL/03ModelLoading/header/camera.h
+header/model.h
+/home/wang/github/LearnOpenGL/03ModelLoading/header/model.h
 iostream
 -
 

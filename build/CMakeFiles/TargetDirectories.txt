@@ -162,3 +162,10 @@
 /home/wang/github/LearnOpenGL/build/03ModelLoading/CMakeFiles/rebuild_cache.dir
 /home/wang/github/LearnOpenGL/build/03ModelLoading/CMakeFiles/edit_cache.dir
 /home/wang/github/LearnOpenGL/build/03ModelLoading/CMakeFiles/22nanosuit_loading.dir
+/home/wang/github/LearnOpenGL/build/04AdvancedOpengl/CMakeFiles/install/strip.dir
+/home/wang/github/LearnOpenGL/build/04AdvancedOpengl/CMakeFiles/install/local.dir
+/home/wang/github/LearnOpenGL/build/04AdvancedOpengl/CMakeFiles/install.dir
+/home/wang/github/LearnOpenGL/build/04AdvancedOpengl/CMakeFiles/list_install_components.dir
+/home/wang/github/LearnOpenGL/build/04AdvancedOpengl/CMakeFiles/rebuild_cache.dir
+/home/wang/github/LearnOpenGL/build/04AdvancedOpengl/CMakeFiles/edit_cache.dir
+/home/wang/github/LearnOpenGL/build/04AdvancedOpengl/CMakeFiles/23depth_testing.dir

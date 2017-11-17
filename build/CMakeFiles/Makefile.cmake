@@ -10,6 +10,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../01GettingStarted/CMakeLists.txt"
   "../02Lighting/CMakeLists.txt"
   "../03ModelLoading/CMakeLists.txt"
+  "../04AdvancedOpengl/CMakeLists.txt"
   "../CMakeLists.txt"
   "../assimp-4.0.1/CMakeLists.txt"
   "../assimp-4.0.1/assimp-config-version.cmake.in"
@@ -104,6 +105,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "01GettingStarted/CMakeFiles/CMakeDirectoryInformation.cmake"
   "02Lighting/CMakeFiles/CMakeDirectoryInformation.cmake"
   "03ModelLoading/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "04AdvancedOpengl/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -164,4 +166,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "02Lighting/CMakeFiles/18point_light.dir/DependInfo.cmake"
   "02Lighting/CMakeFiles/20soft_edge_light.dir/DependInfo.cmake"
   "03ModelLoading/CMakeFiles/22nanosuit_loading.dir/DependInfo.cmake"
+  "04AdvancedOpengl/CMakeFiles/23depth_testing.dir/DependInfo.cmake"
   )

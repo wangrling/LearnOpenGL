@@ -882,6 +882,19 @@ ContinuousUpdate/fast:
 	$(MAKE) -f 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/build.make 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/build
 .PHONY : 22nanosuit_loading/fast
 
+#=============================================================================
+# Target rules for targets named 23depth_testing
+
+# Build rule for target.
+23depth_testing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 23depth_testing
+.PHONY : 23depth_testing
+
+# fast build rule for target.
+23depth_testing/fast:
+	$(MAKE) -f 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/build.make 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/build
+.PHONY : 23depth_testing/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -950,6 +963,7 @@ help:
 	@echo "... 18point_light"
 	@echo "... 20soft_edge_light"
 	@echo "... 22nanosuit_loading"
+	@echo "... 23depth_testing"
 .PHONY : help
 
 

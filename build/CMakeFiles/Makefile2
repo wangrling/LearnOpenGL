@@ -105,7 +105,7 @@ glm-0.9.8.5/glm/preinstall:
 glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/all:
 	$(MAKE) -f glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/build.make glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/depend
 	$(MAKE) -f glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/build.make glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=79 "Built target glm_dummy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num= "Built target glm_dummy"
 .PHONY : glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/all
 
 # Include target in all.
@@ -115,7 +115,7 @@ all: glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/all
 
 # Build rule for subdir invocation for target.
 glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
 .PHONY : glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/rule
@@ -337,7 +337,7 @@ assimp-4.0.1/contrib/irrXML/preinstall:
 assimp-4.0.1/contrib/irrXML/CMakeFiles/IrrXML.dir/all:
 	$(MAKE) -f assimp-4.0.1/contrib/irrXML/CMakeFiles/IrrXML.dir/build.make assimp-4.0.1/contrib/irrXML/CMakeFiles/IrrXML.dir/depend
 	$(MAKE) -f assimp-4.0.1/contrib/irrXML/CMakeFiles/IrrXML.dir/build.make assimp-4.0.1/contrib/irrXML/CMakeFiles/IrrXML.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num= "Built target IrrXML"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=24 "Built target IrrXML"
 .PHONY : assimp-4.0.1/contrib/irrXML/CMakeFiles/IrrXML.dir/all
 
 # Include target in all.
@@ -347,7 +347,7 @@ all: assimp-4.0.1/contrib/irrXML/CMakeFiles/IrrXML.dir/all
 
 # Build rule for subdir invocation for target.
 assimp-4.0.1/contrib/irrXML/CMakeFiles/IrrXML.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 assimp-4.0.1/contrib/irrXML/CMakeFiles/IrrXML.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
 .PHONY : assimp-4.0.1/contrib/irrXML/CMakeFiles/IrrXML.dir/rule
@@ -392,7 +392,7 @@ assimp-4.0.1/code/preinstall:
 assimp-4.0.1/code/CMakeFiles/assimp.dir/all: assimp-4.0.1/contrib/irrXML/CMakeFiles/IrrXML.dir/all
 	$(MAKE) -f assimp-4.0.1/code/CMakeFiles/assimp.dir/build.make assimp-4.0.1/code/CMakeFiles/assimp.dir/depend
 	$(MAKE) -f assimp-4.0.1/code/CMakeFiles/assimp.dir/build.make assimp-4.0.1/code/CMakeFiles/assimp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76 "Built target assimp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77 "Built target assimp"
 .PHONY : assimp-4.0.1/code/CMakeFiles/assimp.dir/all
 
 # Include target in all.
@@ -402,7 +402,7 @@ all: assimp-4.0.1/code/CMakeFiles/assimp.dir/all
 
 # Build rule for subdir invocation for target.
 assimp-4.0.1/code/CMakeFiles/assimp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 54
 	$(MAKE) -f CMakeFiles/Makefile2 assimp-4.0.1/code/CMakeFiles/assimp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
 .PHONY : assimp-4.0.1/code/CMakeFiles/assimp.dir/rule
@@ -448,7 +448,7 @@ assimp-4.0.1/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all: assimp-4.0.1/contri
 assimp-4.0.1/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all: assimp-4.0.1/code/CMakeFiles/assimp.dir/all
 	$(MAKE) -f assimp-4.0.1/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/build.make assimp-4.0.1/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/depend
 	$(MAKE) -f assimp-4.0.1/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/build.make assimp-4.0.1/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=77,78 "Built target assimp_cmd"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=78,79 "Built target assimp_cmd"
 .PHONY : assimp-4.0.1/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all
 
 # Include target in all.
@@ -458,7 +458,7 @@ all: assimp-4.0.1/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all
 
 # Build rule for subdir invocation for target.
 assimp-4.0.1/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 56
 	$(MAKE) -f CMakeFiles/Makefile2 assimp-4.0.1/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
 .PHONY : assimp-4.0.1/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/rule
@@ -544,7 +544,7 @@ all: assimp-4.0.1/test/CMakeFiles/unit.dir/all
 
 # Build rule for subdir invocation for target.
 assimp-4.0.1/test/CMakeFiles/unit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 74
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 75
 	$(MAKE) -f CMakeFiles/Makefile2 assimp-4.0.1/test/CMakeFiles/unit.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
 .PHONY : assimp-4.0.1/test/CMakeFiles/unit.dir/rule
@@ -1632,7 +1632,7 @@ clean: 01GettingStarted/CMakeFiles/07camera_circle.dir/clean
 01GettingStarted/CMakeFiles/10camera_using.dir/all:
 	$(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/depend
 	$(MAKE) -f 01GettingStarted/CMakeFiles/10camera_using.dir/build.make 01GettingStarted/CMakeFiles/10camera_using.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=9,10 "Built target 10camera_using"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=9 "Built target 10camera_using"
 .PHONY : 01GettingStarted/CMakeFiles/10camera_using.dir/all
 
 # Include target in all.
@@ -1642,7 +1642,7 @@ all: 01GettingStarted/CMakeFiles/10camera_using.dir/all
 
 # Build rule for subdir invocation for target.
 01GettingStarted/CMakeFiles/10camera_using.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 01GettingStarted/CMakeFiles/10camera_using.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
 .PHONY : 01GettingStarted/CMakeFiles/10camera_using.dir/rule
@@ -1966,7 +1966,7 @@ clean: 02Lighting/CMakeFiles/21multiple_light.dir/clean
 02Lighting/CMakeFiles/12ambient_diffuse.dir/all:
 	$(MAKE) -f 02Lighting/CMakeFiles/12ambient_diffuse.dir/build.make 02Lighting/CMakeFiles/12ambient_diffuse.dir/depend
 	$(MAKE) -f 02Lighting/CMakeFiles/12ambient_diffuse.dir/build.make 02Lighting/CMakeFiles/12ambient_diffuse.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=12 "Built target 12ambient_diffuse"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=11,12 "Built target 12ambient_diffuse"
 .PHONY : 02Lighting/CMakeFiles/12ambient_diffuse.dir/all
 
 # Include target in all.
@@ -1976,7 +1976,7 @@ all: 02Lighting/CMakeFiles/12ambient_diffuse.dir/all
 
 # Build rule for subdir invocation for target.
 02Lighting/CMakeFiles/12ambient_diffuse.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/12ambient_diffuse.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
 .PHONY : 02Lighting/CMakeFiles/12ambient_diffuse.dir/rule
@@ -2151,7 +2151,7 @@ clean: 02Lighting/CMakeFiles/14materials.dir/clean
 02Lighting/CMakeFiles/11color_test.dir/all:
 	$(MAKE) -f 02Lighting/CMakeFiles/11color_test.dir/build.make 02Lighting/CMakeFiles/11color_test.dir/depend
 	$(MAKE) -f 02Lighting/CMakeFiles/11color_test.dir/build.make 02Lighting/CMakeFiles/11color_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=11 "Built target 11color_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=10 "Built target 11color_test"
 .PHONY : 02Lighting/CMakeFiles/11color_test.dir/all
 
 # Include target in all.
@@ -2355,7 +2355,7 @@ clean: 02Lighting/CMakeFiles/20soft_edge_light.dir/clean
 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/all: assimp-4.0.1/code/CMakeFiles/assimp.dir/all
 	$(MAKE) -f 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/build.make 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/depend
 	$(MAKE) -f 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/build.make 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=22,23 "Built target 22nanosuit_loading"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=22 "Built target 22nanosuit_loading"
 .PHONY : 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/all
 
 # Include target in all.
@@ -2382,6 +2382,62 @@ all: 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/all
 
 # clean rule for target.
 clean: 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory 04AdvancedOpengl
+
+# Convenience name for "all" pass in the directory.
+04AdvancedOpengl/all: 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/all
+
+.PHONY : 04AdvancedOpengl/all
+
+# Convenience name for "clean" pass in the directory.
+04AdvancedOpengl/clean: 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/clean
+
+.PHONY : 04AdvancedOpengl/clean
+
+# Convenience name for "preinstall" pass in the directory.
+04AdvancedOpengl/preinstall:
+
+.PHONY : 04AdvancedOpengl/preinstall
+
+#=============================================================================
+# Target rules for target 04AdvancedOpengl/CMakeFiles/23depth_testing.dir
+
+# All Build rule for target.
+04AdvancedOpengl/CMakeFiles/23depth_testing.dir/all: assimp-4.0.1/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+04AdvancedOpengl/CMakeFiles/23depth_testing.dir/all: assimp-4.0.1/code/CMakeFiles/assimp.dir/all
+	$(MAKE) -f 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/build.make 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/depend
+	$(MAKE) -f 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/build.make 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/github/LearnOpenGL/build/CMakeFiles --progress-num=23 "Built target 23depth_testing"
+.PHONY : 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/all
+
+# Include target in all.
+all: 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+04AdvancedOpengl/CMakeFiles/23depth_testing.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 55
+	$(MAKE) -f CMakeFiles/Makefile2 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/github/LearnOpenGL/build/CMakeFiles 0
+.PHONY : 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/rule
+
+# Convenience name for target.
+23depth_testing: 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/rule
+
+.PHONY : 23depth_testing
+
+# clean rule for target.
+04AdvancedOpengl/CMakeFiles/23depth_testing.dir/clean:
+	$(MAKE) -f 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/build.make 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/clean
+.PHONY : 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/clean
+
+# clean rule for target.
+clean: 04AdvancedOpengl/CMakeFiles/23depth_testing.dir/clean
 
 .PHONY : clean
 

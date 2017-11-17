@@ -39,6 +39,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/wang/github/LearnOpenGL/build/01GettingStarted/cmake_install.cmake")
   include("/home/wang/github/LearnOpenGL/build/02Lighting/cmake_install.cmake")
   include("/home/wang/github/LearnOpenGL/build/03ModelLoading/cmake_install.cmake")
+  include("/home/wang/github/LearnOpenGL/build/04AdvancedOpengl/cmake_install.cmake")
 
 endif()
 

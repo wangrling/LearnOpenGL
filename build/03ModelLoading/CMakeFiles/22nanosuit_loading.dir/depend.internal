@@ -6,9 +6,9 @@
  /home/wang/github/LearnOpenGL/glad/src/glad.c
  /usr/local/include/KHR/khrplatform.h
 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o
- ..//CameraDirector.h
- ..//model.h
- ..//shader.h
+ ..//header/camera.h
+ ..//header/model.h
+ ..//header/shader.h
  ..//stb_image.h
  ../glad/include/glad/glad.h
  ../glm-0.9.8.5/glm/common.hpp
@@ -112,7 +112,8 @@
  ../glm-0.9.8.5/glm/vec3.hpp
  ../glm-0.9.8.5/glm/vec4.hpp
  ../glm-0.9.8.5/glm/vector_relational.hpp
- ../mesh.h
+ ../header/mesh.h
+ ../header/shader.h
  /home/wang/github/LearnOpenGL/03ModelLoading/22nanosuit_loading.cpp
  /usr/local/include/GL/gl.h
  /usr/local/include/GL/gl_mangle.h

@@ -5,9 +5,9 @@
 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/__/glad/src/glad.c.o: ../glad/src/glad.c
 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/__/glad/src/glad.c.o: /usr/local/include/KHR/khrplatform.h
 
-03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../CameraDirector.h
-03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../model.h
-03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../shader.h
+03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../header/camera.h
+03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../header/model.h
+03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../header/shader.h
 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../stb_image.h
 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../glad/include/glad/glad.h
 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../glm-0.9.8.5/glm/common.hpp
@@ -111,7 +111,8 @@
 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../glm-0.9.8.5/glm/vec3.hpp
 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../glm-0.9.8.5/glm/vec4.hpp
 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../glm-0.9.8.5/glm/vector_relational.hpp
-03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../mesh.h
+03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../header/mesh.h
+03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../header/shader.h
 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: ../03ModelLoading/22nanosuit_loading.cpp
 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: /usr/local/include/GL/gl.h
 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/22nanosuit_loading.cpp.o: /usr/local/include/GL/gl_mangle.h

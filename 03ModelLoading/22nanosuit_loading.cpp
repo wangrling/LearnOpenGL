@@ -3,9 +3,9 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include "shader.h"
-#include "CameraDirector.h"
-#include "model.h"
+#include "header/shader.h"
+#include "header/camera.h"
+#include "header/model.h"
 #include <iostream>
 
 
@@ -77,8 +77,13 @@ int main()
     // load models
     // -----------
     Model ourModel("images/nanosuit/nanosuit.obj");
-
-    
+    // Model ourModel("images/earth/earth.obj");
+    // Model ourModel("images/BMW_X5_4.obj");
+    // Model ourModel("images/7h15t5bvooe8-Aventador/Avent.obj");
+    // Model ourModel("images/bugatti/bugatti.obj");
+    // Model ourModel("images/5cyle10vuwzk-S2/OBJ.obj");
+    // Model ourModel("images/Girl/Girl.obj");
+    // Model ourModel("images/nude/Blonde-Elexis-nude.obj");
     // draw in wireframe
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
@@ -115,6 +120,7 @@ int main()
         model = glm::translate(model, glm::vec3(0.0f, -1.75f, 0.0f)); // translate it down so it's at the center of the scene
         model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));	// it's a bit too big for our scene, so scale it down
         ourShader.setMat4("model", model);
+        
         ourModel.Draw(ourShader);
 
 
