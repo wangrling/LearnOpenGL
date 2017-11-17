@@ -19,7 +19,7 @@ bool firstMouse = true;
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
-glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
+glm::vec3 lightPos(0.5f, 0.5f, 2.0f);
 
 int createProgram(const char* vertexSource, const char* fragmentSource);
 
@@ -33,33 +33,36 @@ const char* objectVertexSource = "#version 330 core \n"
     "uniform mat4 projection; \n"
     "void main() { \n"
     "    FragPos = vec3(model * vec4(aPos, 1.0)); \n"
-    "    Normal = aNormal; \n"
+    "    Normal = mat3(transpose(inverse(model))) * aNormal; \n"
     "    gl_Position = projection * view * vec4(FragPos, 1.0); \n"
     "} \n";
 const char* objectFragmentSource = "#version 330 core \n"
     "out vec4 FragColor; \n"
+    "struct Material { \n"
+    "    vec3 ambient; vec3 diffuse; vec3 specular; float shininess; \n"
+    "}; \n"
+    "struct Light { \n"
+    "    vec3 position; vec3 ambient; vec3 diffuse; vec3 specular; \n"
+    "}; \n"
     "in vec3 Normal; \n"
     "in vec3 FragPos; \n"
-    "uniform vec3 lightPos; \n"
     "uniform vec3 viewPos; \n"
-    "uniform vec3 objectColor; \n"
-    "uniform vec3 lightColor; \n"
+    "uniform Material material; \n"
+    "uniform Light light;"
     "void main() { \n"
     "    // ambient \n"
-    "    float ambientStrength = 0.1; \n"
-    "    vec3 ambient = ambientStrength * lightColor; \n"
+    "    vec3 ambient = light.ambient * material.ambient; \n"
     "    // diffuse \n"
     "    vec3 norm = normalize(Normal); \n"
-    "    vec3 lightDir = normalize(lightPos - FragPos); \n"
+    "    vec3 lightDir = normalize(light.position - FragPos); \n"
     "    float diff = max(dot(norm, lightDir), 0.0); \n"
-    "    vec3 diffuse = diff * lightColor; \n"
+    "    vec3 diffuse = light.diffuse * diff * material.diffuse; \n"
     "    // specular \n"
-    "    float specularStrength = 2.0; \n"
     "    vec3 viewDir = normalize(viewPos - FragPos); \n"
     "    vec3 reflectDir = reflect(-lightDir, norm); \n"
-    "    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32); \n"
-    "    vec3 specular = specularStrength * spec * lightColor; \n"
-    "    vec3 result = (ambient + diffuse + specular) * objectColor; \n"
+    "    float spec = pow(max(dot(viewDir, reflectDir), 0.0), material.shininess); \n"
+    "    vec3 specular = light.specular * spec * material.specular; \n"
+    "    vec3 result = ambient + diffuse + specular; \n"
     "    FragColor = vec4(result, 1.0); \n"
     "} \n";
 const char* lightVertexSource = "#version 330 core \n"
@@ -172,11 +175,26 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         glUseProgram(objectProgram);
-        glUniform3f(glGetUniformLocation(objectProgram, "objectColor"), 1.0f, 0.5f, 0.31f);
-        glUniform3f(glGetUniformLocation(objectProgram, "lightColor"), 1.0f, 1.0f, 1.0f);
-        glUniform3fv(glGetUniformLocation(objectProgram, "lightPos"), 1, &lightPos[0]);
+        glUniform3fv(glGetUniformLocation(objectProgram, "light.position"), 1, &lightPos[0]);
         glUniform3fv(glGetUniformLocation(objectProgram, "viewPos"), 1, &(camera.Position[0]));
-    
+
+        // light properties
+        glm::vec3 lightColor;
+        lightColor.x = sin(glfwGetTime() * 2.0f);
+        lightColor.y = sin(glfwGetTime() * 0.7f);
+        lightColor.z = sin(glfwGetTime() * 1.3f);
+        glm::vec3 diffuseColor = lightColor * glm::vec3(0.5f);
+        glm::vec3 ambientColor = diffuseColor * glm::vec3(0.2f);
+        glUniform3fv(glGetUniformLocation(objectProgram, "light.ambient"), 1, &ambientColor[0]);
+        glUniform3fv(glGetUniformLocation(objectProgram, "light.diffuse"), 1, &diffuseColor[0]);
+        glUniform3f(glGetUniformLocation(objectProgram, "light.specular"), 1.0f, 1.0f, 1.0f);
+
+        // material properties
+        glUniform3f(glGetUniformLocation(objectProgram, "material.ambient"), 1.0f, 0.5f, 0.31f);
+        glUniform3f(glGetUniformLocation(objectProgram, "material.diffuse"), 1.0f, 0.5f, 0.31f);
+        glUniform3f(glGetUniformLocation(objectProgram, "material.specular"), 0.5f, 0.5f, 0.5f);
+        glUniform1f(glGetUniformLocation(objectProgram, "material.shininess"), 32.0f);
+
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), 4.0f/3.0f, 0.1f, 100.0f);
         glm::mat4 view = camera.getViewMatrix();
         glm::mat4 model;
@@ -245,7 +263,7 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
 }
 
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
-    camera.ProcessMouseScroll(yoffset);
+    camera.processMouseScroll(yoffset);
 }
 
 int createProgram(const char* vertexSource, const char* fragmentSource) {

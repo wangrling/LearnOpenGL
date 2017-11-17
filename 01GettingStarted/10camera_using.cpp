@@ -223,7 +223,7 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
 }
 
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
-    camera.ProcessMouseScroll(yoffset);
+    camera.processMouseScroll(yoffset);
 }
 
 unsigned int loadTexture(const char *image, unsigned int rgb) {

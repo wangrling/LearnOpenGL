@@ -20,3 +20,24 @@ target_link_libraries(13specular_light ${OPENGL_LIBRARIES} glfw dl glm)
 
 add_executable(14materials 14materials.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
 target_link_libraries(14materials ${OPENGL_LIBRARIES} glfw dl glm)
+
+add_executable(15diffuse_map 15diffuse_map.cpp ${PROJECT_SOURCE_DIR}/stb_image.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
+target_link_libraries(15diffuse_map ${OPENGL_LIBRARIES} glfw dl glm)
+
+add_executable(16specular_map 16specular_map.cpp ${PROJECT_SOURCE_DIR}/stb_image.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
+target_link_libraries(16specular_map ${OPENGL_LIBRARIES} glfw dl glm)
+
+add_executable(17direction_light 17direction_light.cpp ${PROJECT_SOURCE_DIR}/stb_image.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
+target_link_libraries(17direction_light ${OPENGL_LIBRARIES} glfw dl glm)
+
+add_executable(18point_light 18point_light.cpp ${PROJECT_SOURCE_DIR}/stb_image.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
+target_link_libraries(18point_light ${OPENGL_LIBRARIES} glfw dl glm)
+
+add_executable(19flash_light 19flash_light.cpp ${PROJECT_SOURCE_DIR}/stb_image.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
+target_link_libraries(19flash_light ${OPENGL_LIBRARIES} glfw dl glm)
+
+add_executable(20soft_edge_light 20soft_edge_light.cpp ${PROJECT_SOURCE_DIR}/stb_image.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
+target_link_libraries(20soft_edge_light ${OPENGL_LIBRARIES} glfw dl glm)
+
+add_executable(21multiple_light 21multiple_light.cpp ${PROJECT_SOURCE_DIR}/stb_image.cpp ${PROJECT_SOURCE_DIR}/glad/src/glad.c ${PROJECT_SOURCE_DIR}/stb_image.cpp)
+target_link_libraries(21multiple_light ${OPENGL_LIBRARIES} glfw dl glm)

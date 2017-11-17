@@ -14,6 +14,226 @@
 # EXTERNAL cache entries
 ########################
 
+//Android JNI IOSystem support is active
+ASSIMP_ANDROID_JNIIOSYSTEM:BOOL=OFF
+
+//Path the tool executables are installed to.
+ASSIMP_BIN_INSTALL_DIR:STRING=bin
+
+//build the 3DS importer
+ASSIMP_BUILD_3DS_IMPORTER:BOOL=ON
+
+//build the 3D importer
+ASSIMP_BUILD_3D_IMPORTER:BOOL=ON
+
+//build the 3MF importer
+ASSIMP_BUILD_3MF_IMPORTER:BOOL=ON
+
+//build the AC importer
+ASSIMP_BUILD_AC_IMPORTER:BOOL=ON
+
+//default value of all ASSIMP_BUILD_XXX_IMPORTER value
+ASSIMP_BUILD_ALL_IMPORTERS_BY_DEFAULT:BOOL=ON
+
+//build the AMF importer
+ASSIMP_BUILD_AMF_IMPORTER:BOOL=ON
+
+//describe the current architecture.
+ASSIMP_BUILD_ARCHITECTURE:STRING=
+
+//build the ASE importer
+ASSIMP_BUILD_ASE_IMPORTER:BOOL=ON
+
+//build the ASSBIN importer
+ASSIMP_BUILD_ASSBIN_IMPORTER:BOOL=ON
+
+//If the supplementary tools for Assimp are built in addition to
+// the library.
+ASSIMP_BUILD_ASSIMP_TOOLS:BOOL=ON
+
+//build the ASSXML importer
+ASSIMP_BUILD_ASSXML_IMPORTER:BOOL=ON
+
+//build the B3D importer
+ASSIMP_BUILD_B3D_IMPORTER:BOOL=ON
+
+//build the BLEND importer
+ASSIMP_BUILD_BLEND_IMPORTER:BOOL=ON
+
+//build the BVH importer
+ASSIMP_BUILD_BVH_IMPORTER:BOOL=ON
+
+//build the COB importer
+ASSIMP_BUILD_COB_IMPORTER:BOOL=ON
+
+//build the COLLADA importer
+ASSIMP_BUILD_COLLADA_IMPORTER:BOOL=ON
+
+//describe the current compiler.
+ASSIMP_BUILD_COMPILER:STRING=
+
+//build the CSM importer
+ASSIMP_BUILD_CSM_IMPORTER:BOOL=ON
+
+//build the DXF importer
+ASSIMP_BUILD_DXF_IMPORTER:BOOL=ON
+
+//build the FBX importer
+ASSIMP_BUILD_FBX_IMPORTER:BOOL=ON
+
+//build the GLTF importer
+ASSIMP_BUILD_GLTF_IMPORTER:BOOL=ON
+
+//build the HMP importer
+ASSIMP_BUILD_HMP_IMPORTER:BOOL=ON
+
+//build the IFC importer
+ASSIMP_BUILD_IFC_IMPORTER:BOOL=ON
+
+//build the IRRMESH importer
+ASSIMP_BUILD_IRRMESH_IMPORTER:BOOL=ON
+
+//build the IRR importer
+ASSIMP_BUILD_IRR_IMPORTER:BOOL=ON
+
+//build the LWO importer
+ASSIMP_BUILD_LWO_IMPORTER:BOOL=ON
+
+//build the LWS importer
+ASSIMP_BUILD_LWS_IMPORTER:BOOL=ON
+
+//build the MD2 importer
+ASSIMP_BUILD_MD2_IMPORTER:BOOL=ON
+
+//build the MD3 importer
+ASSIMP_BUILD_MD3_IMPORTER:BOOL=ON
+
+//build the MD5 importer
+ASSIMP_BUILD_MD5_IMPORTER:BOOL=ON
+
+//build the MDC importer
+ASSIMP_BUILD_MDC_IMPORTER:BOOL=ON
+
+//build the MDL importer
+ASSIMP_BUILD_MDL_IMPORTER:BOOL=ON
+
+//build the MMD importer
+ASSIMP_BUILD_MMD_IMPORTER:BOOL=ON
+
+//build the MS3D importer
+ASSIMP_BUILD_MS3D_IMPORTER:BOOL=ON
+
+//build the NDO importer
+ASSIMP_BUILD_NDO_IMPORTER:BOOL=ON
+
+//build the NFF importer
+ASSIMP_BUILD_NFF_IMPORTER:BOOL=ON
+
+//Build the C4D importer, which relies on the non-free Melange
+// SDK.
+ASSIMP_BUILD_NONFREE_C4D_IMPORTER:BOOL=OFF
+
+//build the OBJ importer
+ASSIMP_BUILD_OBJ_IMPORTER:BOOL=ON
+
+//build the OFF importer
+ASSIMP_BUILD_OFF_IMPORTER:BOOL=ON
+
+//build the OGRE importer
+ASSIMP_BUILD_OGRE_IMPORTER:BOOL=ON
+
+//build the OPENGEX importer
+ASSIMP_BUILD_OPENGEX_IMPORTER:BOOL=ON
+
+//build the PLY importer
+ASSIMP_BUILD_PLY_IMPORTER:BOOL=ON
+
+//build the Q3BSP importer
+ASSIMP_BUILD_Q3BSP_IMPORTER:BOOL=ON
+
+//build the Q3D importer
+ASSIMP_BUILD_Q3D_IMPORTER:BOOL=ON
+
+//build the RAW importer
+ASSIMP_BUILD_RAW_IMPORTER:BOOL=ON
+
+//If the official samples are built as well (needs Glut).
+ASSIMP_BUILD_SAMPLES:BOOL=OFF
+
+//build the SIB importer
+ASSIMP_BUILD_SIB_IMPORTER:BOOL=ON
+
+//build the SMD importer
+ASSIMP_BUILD_SMD_IMPORTER:BOOL=ON
+
+//build the STL importer
+ASSIMP_BUILD_STL_IMPORTER:BOOL=ON
+
+//build the TERRAGEN importer
+ASSIMP_BUILD_TERRAGEN_IMPORTER:BOOL=ON
+
+//If the test suite for Assimp is built in addition to the library.
+ASSIMP_BUILD_TESTS:BOOL=ON
+
+//build the X3D importer
+ASSIMP_BUILD_X3D_IMPORTER:BOOL=ON
+
+//build the XGL importer
+ASSIMP_BUILD_XGL_IMPORTER:BOOL=ON
+
+//build the X importer
+ASSIMP_BUILD_X_IMPORTER:BOOL=ON
+
+//Build your own zlib
+ASSIMP_BUILD_ZLIB:BOOL=OFF
+
+//Eańable this to measure test coverage.
+ASSIMP_COVERALLS:BOOL=OFF
+
+//Set to ON to enable double precision processing
+ASSIMP_DOUBLE_PRECISION:BOOL=OFF
+
+//adds the target headercheck which compiles every header file,
+// default disabled because it adds many targets
+ASSIMP_HEADERCHECK:BOOL=OFF
+
+//Path the header files are installed to.
+ASSIMP_INCLUDE_INSTALL_DIR:STRING=include
+
+//Suffix to append to library names
+ASSIMP_LIBRARY_SUFFIX:STRING=
+
+//Path the built library files are installed to.
+ASSIMP_LIB_INSTALL_DIR:STRING=lib
+
+//Disable Assimp's export functionality.
+ASSIMP_NO_EXPORT:BOOL=OFF
+
+//Set to ON to generate CPack configuration files and packaging
+// targets
+ASSIMP_OPT_BUILD_PACKAGES:BOOL=OFF
+
+//the package-specific version used for uploading the sources
+ASSIMP_PACKAGE_VERSION:STRING=0
+
+//Value Computed by CMake
+Assimp_BINARY_DIR:STATIC=/home/wang/github/LearnOpenGL/build/assimp-4.0.1
+
+//Value Computed by CMake
+Assimp_SOURCE_DIR:STATIC=/home/wang/github/LearnOpenGL/assimp-4.0.1
+
+//Build documentation using Doxygen.
+BUILD_DOCS:BOOL=OFF
+
+//Build package with shared libraries.
+BUILD_SHARED_LIBS:BOOL=ON
+
+//Build the testing tree.
+BUILD_TESTING:BOOL=ON
+
+//Path to a program.
+BZRCOMMAND:FILEPATH=BZRCOMMAND-NOTFOUND
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
@@ -61,6 +281,9 @@ CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 
 //Flags used by the compiler during release builds with debug info.
 CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
+//Debug Postfix for lib, samples and tools
+CMAKE_DEBUG_POSTFIX:STRING=
 
 //Flags used by the linker.
 CMAKE_EXE_LINKER_FLAGS:STRING=
@@ -210,6 +433,31 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to the coverage program that CTest uses for performing coverage
+// inspection
+COVERAGE_COMMAND:FILEPATH=/usr/bin/gcov
+
+//Extra command line flags to pass to the coverage tool
+COVERAGE_EXTRA_FLAGS:STRING=-l
+
+//How many times to retry timed-out CTest submissions.
+CTEST_SUBMIT_RETRY_COUNT:STRING=3
+
+//How long to wait between timed-out CTest submissions.
+CTEST_SUBMIT_RETRY_DELAY:STRING=5
+
+//Path to a program.
+CVSCOMMAND:FILEPATH=CVSCOMMAND-NOTFOUND
+
+//Options passed to the cvs update command.
+CVS_UPDATE_OPTIONS:STRING=-d -A -P
+
+//Maximum time allowed before CTest will kill the test.
+DART_TESTING_TIMEOUT:STRING=1500
+
+//Path to a program.
+GITCOMMAND:FILEPATH=/usr/bin/git
+
 //GLM static library
 GLM_DYNAMIC_LIBRARY_ENABLE:BOOL=OFF
 
@@ -258,6 +506,33 @@ GLM_TEST_ENABLE_SIMD_SSE3:BOOL=OFF
 //Force 'pure' instructions
 GLM_TEST_FORCE_PURE:BOOL=OFF
 
+//Path to a program.
+HGCOMMAND:FILEPATH=HGCOMMAND-NOTFOUND
+
+//The file that corresponds to the il (system?) utility library.
+ILUT_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libILUT.so
+
+//The file that corresponds to the il utility library.
+ILU_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libILU.so
+
+//The path to the directory that contains il.h
+IL_INCLUDE_DIR:PATH=/usr/include/IL
+
+//The file that corresponds to the base il library.
+IL_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libIL.so
+
+//Dependencies for target
+IrrXML_LIB_DEPENDS:STATIC=
+
+//Command to build the project
+MAKECOMMAND:STRING=/usr/local/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
+
+//Path to the memory checking command, used for memory error detection.
+MEMORYCHECK_COMMAND:FILEPATH=/usr/bin/valgrind
+
+//File that contains suppressions for the memory checker
+MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
+
 //Path to a file.
 OPENGL_INCLUDE_DIR:PATH=/usr/local/include
 
@@ -269,6 +544,55 @@ OPENGL_glu_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libGLU.so
 
 //Path to a file.
 OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
+
+//C++ compiler flags for OpenMP parallization
+OpenMP_CXX_FLAGS:STRING=-fopenmp
+
+//C compiler flags for OpenMP parallization
+OpenMP_C_FLAGS:STRING=-fopenmp
+
+//Path to a program.
+P4COMMAND:FILEPATH=P4COMMAND-NOTFOUND
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=Qt5Widgets_DIR-NOTFOUND
+
+//Path to a library.
+RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
+
+//Path to scp command, used by CTest for submitting results to
+// a Dart server
+SCPCOMMAND:FILEPATH=/usr/bin/scp
+
+//Name of the computer/site where compile is being run
+SITE:STRING=wang
+
+//Path to the SLURM sbatch executable
+SLURM_SBATCH_COMMAND:FILEPATH=SLURM_SBATCH_COMMAND-NOTFOUND
+
+//Path to the SLURM srun executable
+SLURM_SRUN_COMMAND:FILEPATH=SLURM_SRUN_COMMAND-NOTFOUND
+
+//Path to a program.
+SVNCOMMAND:FILEPATH=SVNCOMMAND-NOTFOUND
+
+//Use system installed Irrlicht/IrrXML library.
+SYSTEM_IRRXML:BOOL=OFF
+
+//Path to a file.
+ZLIB_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+ZLIB_LIBRARY_DBG:FILEPATH=/usr/lib/x86_64-linux-gnu/libz.so
+
+//Path to a library.
+ZLIB_LIBRARY_REL:FILEPATH=/usr/lib/x86_64-linux-gnu/libz.so
+
+//Dependencies for the target
+assimp_LIB_DEPENDS:STATIC=optimized;/usr/lib/x86_64-linux-gnu/libz.so;debug;/usr/lib/x86_64-linux-gnu/libz.so;general;IrrXML;general;/usr/lib/x86_64-linux-gnu/librt.so;
 
 //The directory containing a CMake configuration file for glfw3.
 glfw3_DIR:PATH=/usr/local/lib/cmake/glfw3
@@ -290,6 +614,12 @@ opengl_SOURCE_DIR:STATIC=/home/wang/github/LearnOpenGL
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: ASSIMP_BUILD_ARCHITECTURE
+ASSIMP_BUILD_ARCHITECTURE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ASSIMP_BUILD_COMPILER
+ASSIMP_BUILD_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BZRCOMMAND
+BZRCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
@@ -306,6 +636,8 @@ CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 CMAKE_COMMAND:INTERNAL=/usr/local/bin/cmake
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=/usr/local/bin/cpack
+//ADVANCED property for variable: CMAKE_CTEST_COMMAND
+CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/usr/local/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
@@ -408,7 +740,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=18
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -447,8 +779,44 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: COVERAGE_COMMAND
+COVERAGE_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
+COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
+CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
+CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CVSCOMMAND
+CVSCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CVS_UPDATE_OPTIONS
+CVS_UPDATE_OPTIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DART_TESTING_TIMEOUT
+DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//Details about finding IL
+FIND_PACKAGE_MESSAGE_DETAILS_IL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libIL.so][/usr/include/IL][v()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/local/lib/libGL.so][/usr/local/include][v()]
+//Details about finding OpenMP
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[-fopenmp][-fopenmp][v()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.26()]
+//Details about finding rt
+FIND_PACKAGE_MESSAGE_DETAILS_rt:INTERNAL=[/usr/lib/x86_64-linux-gnu/librt.so][v()]
+//ADVANCED property for variable: GITCOMMAND
+GITCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: HGCOMMAND
+HGCOMMAND-ADVANCED:INTERNAL=1
+//IrrXML_Include
+IRRXML_INCLUDE_DIR:INTERNAL=/home/wang/github/LearnOpenGL/assimp-4.0.1/contrib/irrXML
+//IrrXML
+IRRXML_LIBRARY:INTERNAL=IrrXML
+//ADVANCED property for variable: MAKECOMMAND
+MAKECOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MEMORYCHECK_COMMAND
+MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
+MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_INCLUDE_DIR
 OPENGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_gl_LIBRARY
@@ -457,6 +825,90 @@ OPENGL_gl_LIBRARY-ADVANCED:INTERNAL=1
 OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_xmesa_INCLUDE_DIR
 OPENGL_xmesa_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenMP_CXX_FLAGS
+OpenMP_CXX_FLAGS-ADVANCED:INTERNAL=1
+//C++ compiler's OpenMP specification date
+OpenMP_CXX_SPEC_DATE:INTERNAL=201307
+//ADVANCED property for variable: OpenMP_C_FLAGS
+OpenMP_C_FLAGS-ADVANCED:INTERNAL=1
+//C compiler's OpenMP specification date
+OpenMP_C_SPEC_DATE:INTERNAL=201307
+//Test OpenMP_FLAG_DETECTED
+OpenMP_FLAG_DETECTED:INTERNAL=1
+//ADVANCED property for variable: P4COMMAND
+P4COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: RT_LIBRARY
+RT_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SCPCOMMAND
+SCPCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SITE
+SITE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SLURM_SBATCH_COMMAND
+SLURM_SBATCH_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SLURM_SRUN_COMMAND
+SLURM_SRUN_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SVNCOMMAND
+SVNCOMMAND-ADVANCED:INTERNAL=1
+UNZIP_CFLAGS:INTERNAL=
+UNZIP_CFLAGS_I:INTERNAL=
+UNZIP_CFLAGS_OTHER:INTERNAL=
+UNZIP_FOUND:INTERNAL=
+UNZIP_INCLUDEDIR:INTERNAL=
+UNZIP_LIBDIR:INTERNAL=
+UNZIP_LIBS:INTERNAL=
+UNZIP_LIBS_L:INTERNAL=
+UNZIP_LIBS_OTHER:INTERNAL=
+UNZIP_LIBS_PATHS:INTERNAL=
+UNZIP_PREFIX:INTERNAL=
+UNZIP_STATIC_CFLAGS:INTERNAL=
+UNZIP_STATIC_CFLAGS_I:INTERNAL=
+UNZIP_STATIC_CFLAGS_OTHER:INTERNAL=
+UNZIP_STATIC_LIBDIR:INTERNAL=
+UNZIP_STATIC_LIBS:INTERNAL=
+UNZIP_STATIC_LIBS_L:INTERNAL=
+UNZIP_STATIC_LIBS_OTHER:INTERNAL=
+UNZIP_STATIC_LIBS_PATHS:INTERNAL=
+UNZIP_VERSION:INTERNAL=
+UNZIP_minizip_INCLUDEDIR:INTERNAL=
+UNZIP_minizip_LIBDIR:INTERNAL=
+UNZIP_minizip_PREFIX:INTERNAL=
+UNZIP_minizip_VERSION:INTERNAL=
+//ADVANCED property for variable: ZLIB_INCLUDE_DIR
+ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_DBG
+ZLIB_LIBRARY_DBG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_REL
+ZLIB_LIBRARY_REL-ADVANCED:INTERNAL=1
+ZLIB_PKGC_CFLAGS:INTERNAL=
+ZLIB_PKGC_CFLAGS_I:INTERNAL=
+ZLIB_PKGC_CFLAGS_OTHER:INTERNAL=
+ZLIB_PKGC_FOUND:INTERNAL=
+ZLIB_PKGC_INCLUDEDIR:INTERNAL=
+ZLIB_PKGC_LIBDIR:INTERNAL=
+ZLIB_PKGC_LIBS:INTERNAL=
+ZLIB_PKGC_LIBS_L:INTERNAL=
+ZLIB_PKGC_LIBS_OTHER:INTERNAL=
+ZLIB_PKGC_LIBS_PATHS:INTERNAL=
+ZLIB_PKGC_PREFIX:INTERNAL=
+ZLIB_PKGC_STATIC_CFLAGS:INTERNAL=
+ZLIB_PKGC_STATIC_CFLAGS_I:INTERNAL=
+ZLIB_PKGC_STATIC_CFLAGS_OTHER:INTERNAL=
+ZLIB_PKGC_STATIC_LIBDIR:INTERNAL=
+ZLIB_PKGC_STATIC_LIBS:INTERNAL=
+ZLIB_PKGC_STATIC_LIBS_L:INTERNAL=
+ZLIB_PKGC_STATIC_LIBS_OTHER:INTERNAL=
+ZLIB_PKGC_STATIC_LIBS_PATHS:INTERNAL=
+ZLIB_PKGC_VERSION:INTERNAL=
+ZLIB_PKGC_zzip-zlib-config_INCLUDEDIR:INTERNAL=
+ZLIB_PKGC_zzip-zlib-config_LIBDIR:INTERNAL=
+ZLIB_PKGC_zzip-zlib-config_PREFIX:INTERNAL=
+ZLIB_PKGC_zzip-zlib-config_VERSION:INTERNAL=
+//x
+ZLIB_PREFIX_PATH_INT_CHECK:INTERNAL=
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+__pkg_config_checked_UNZIP:INTERNAL=1
+__pkg_config_checked_ZLIB_PKGC:INTERNAL=1
 

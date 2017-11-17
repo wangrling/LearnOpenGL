@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/15diffuse_map.dir/15diffuse_map.cpp.o CMakeFiles/15diffuse_map.dir/__/stb_image.cpp.o CMakeFiles/15diffuse_map.dir/__/glad/src/glad.c.o  -o 15diffuse_map -Wl,-rpath,/usr/local/lib -rdynamic -lGLU /usr/local/lib/libGL.so /usr/local/lib/libglfw.so.3.3 -ldl 

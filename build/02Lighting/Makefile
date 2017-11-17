@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/wang/github/LearnOpenGL/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -77,28 +66,6 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -112,15 +79,48 @@ install/fast: preinstall/fast
 	/usr/local/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"assimp-bin\" \"assimp-dev\" \"libassimp4.0.1-dev\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/local/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -155,34 +155,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-02Lighting/CMakeFiles/14materials.dir/rule:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/14materials.dir/rule
-.PHONY : 02Lighting/CMakeFiles/14materials.dir/rule
+02Lighting/CMakeFiles/21multiple_light.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/21multiple_light.dir/rule
+.PHONY : 02Lighting/CMakeFiles/21multiple_light.dir/rule
 
 # Convenience name for target.
-14materials: 02Lighting/CMakeFiles/14materials.dir/rule
+21multiple_light: 02Lighting/CMakeFiles/21multiple_light.dir/rule
 
-.PHONY : 14materials
+.PHONY : 21multiple_light
 
 # fast build rule for target.
-14materials/fast:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/build
-.PHONY : 14materials/fast
-
-# Convenience name for target.
-02Lighting/CMakeFiles/13specular_light.dir/rule:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/13specular_light.dir/rule
-.PHONY : 02Lighting/CMakeFiles/13specular_light.dir/rule
-
-# Convenience name for target.
-13specular_light: 02Lighting/CMakeFiles/13specular_light.dir/rule
-
-.PHONY : 13specular_light
-
-# fast build rule for target.
-13specular_light/fast:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/build
-.PHONY : 13specular_light/fast
+21multiple_light/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/21multiple_light.dir/build.make 02Lighting/CMakeFiles/21multiple_light.dir/build
+.PHONY : 21multiple_light/fast
 
 # Convenience name for target.
 02Lighting/CMakeFiles/12ambient_diffuse.dir/rule:
@@ -200,6 +185,66 @@ depend:
 .PHONY : 12ambient_diffuse/fast
 
 # Convenience name for target.
+02Lighting/CMakeFiles/13specular_light.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/13specular_light.dir/rule
+.PHONY : 02Lighting/CMakeFiles/13specular_light.dir/rule
+
+# Convenience name for target.
+13specular_light: 02Lighting/CMakeFiles/13specular_light.dir/rule
+
+.PHONY : 13specular_light
+
+# fast build rule for target.
+13specular_light/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/build
+.PHONY : 13specular_light/fast
+
+# Convenience name for target.
+02Lighting/CMakeFiles/15diffuse_map.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/15diffuse_map.dir/rule
+.PHONY : 02Lighting/CMakeFiles/15diffuse_map.dir/rule
+
+# Convenience name for target.
+15diffuse_map: 02Lighting/CMakeFiles/15diffuse_map.dir/rule
+
+.PHONY : 15diffuse_map
+
+# fast build rule for target.
+15diffuse_map/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/15diffuse_map.dir/build.make 02Lighting/CMakeFiles/15diffuse_map.dir/build
+.PHONY : 15diffuse_map/fast
+
+# Convenience name for target.
+02Lighting/CMakeFiles/19flash_light.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/19flash_light.dir/rule
+.PHONY : 02Lighting/CMakeFiles/19flash_light.dir/rule
+
+# Convenience name for target.
+19flash_light: 02Lighting/CMakeFiles/19flash_light.dir/rule
+
+.PHONY : 19flash_light
+
+# fast build rule for target.
+19flash_light/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/19flash_light.dir/build.make 02Lighting/CMakeFiles/19flash_light.dir/build
+.PHONY : 19flash_light/fast
+
+# Convenience name for target.
+02Lighting/CMakeFiles/14materials.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/14materials.dir/rule
+.PHONY : 02Lighting/CMakeFiles/14materials.dir/rule
+
+# Convenience name for target.
+14materials: 02Lighting/CMakeFiles/14materials.dir/rule
+
+.PHONY : 14materials
+
+# fast build rule for target.
+14materials/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/build
+.PHONY : 14materials/fast
+
+# Convenience name for target.
 02Lighting/CMakeFiles/11color_test.dir/rule:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/11color_test.dir/rule
 .PHONY : 02Lighting/CMakeFiles/11color_test.dir/rule
@@ -213,6 +258,66 @@ depend:
 11color_test/fast:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/11color_test.dir/build.make 02Lighting/CMakeFiles/11color_test.dir/build
 .PHONY : 11color_test/fast
+
+# Convenience name for target.
+02Lighting/CMakeFiles/16specular_map.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/16specular_map.dir/rule
+.PHONY : 02Lighting/CMakeFiles/16specular_map.dir/rule
+
+# Convenience name for target.
+16specular_map: 02Lighting/CMakeFiles/16specular_map.dir/rule
+
+.PHONY : 16specular_map
+
+# fast build rule for target.
+16specular_map/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/16specular_map.dir/build.make 02Lighting/CMakeFiles/16specular_map.dir/build
+.PHONY : 16specular_map/fast
+
+# Convenience name for target.
+02Lighting/CMakeFiles/17direction_light.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/17direction_light.dir/rule
+.PHONY : 02Lighting/CMakeFiles/17direction_light.dir/rule
+
+# Convenience name for target.
+17direction_light: 02Lighting/CMakeFiles/17direction_light.dir/rule
+
+.PHONY : 17direction_light
+
+# fast build rule for target.
+17direction_light/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/17direction_light.dir/build.make 02Lighting/CMakeFiles/17direction_light.dir/build
+.PHONY : 17direction_light/fast
+
+# Convenience name for target.
+02Lighting/CMakeFiles/18point_light.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/18point_light.dir/rule
+.PHONY : 02Lighting/CMakeFiles/18point_light.dir/rule
+
+# Convenience name for target.
+18point_light: 02Lighting/CMakeFiles/18point_light.dir/rule
+
+.PHONY : 18point_light
+
+# fast build rule for target.
+18point_light/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/18point_light.dir/build.make 02Lighting/CMakeFiles/18point_light.dir/build
+.PHONY : 18point_light/fast
+
+# Convenience name for target.
+02Lighting/CMakeFiles/20soft_edge_light.dir/rule:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f CMakeFiles/Makefile2 02Lighting/CMakeFiles/20soft_edge_light.dir/rule
+.PHONY : 02Lighting/CMakeFiles/20soft_edge_light.dir/rule
+
+# Convenience name for target.
+20soft_edge_light: 02Lighting/CMakeFiles/20soft_edge_light.dir/rule
+
+.PHONY : 20soft_edge_light
+
+# fast build rule for target.
+20soft_edge_light/fast:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/20soft_edge_light.dir/build.make 02Lighting/CMakeFiles/20soft_edge_light.dir/build
+.PHONY : 20soft_edge_light/fast
 
 11color_test.o: 11color_test.cpp.o
 
@@ -322,16 +427,212 @@ depend:
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/14materials.cpp.s
 .PHONY : 14materials.cpp.s
 
+15diffuse_map.o: 15diffuse_map.cpp.o
+
+.PHONY : 15diffuse_map.o
+
+# target to build an object file
+15diffuse_map.cpp.o:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/15diffuse_map.dir/build.make 02Lighting/CMakeFiles/15diffuse_map.dir/15diffuse_map.cpp.o
+.PHONY : 15diffuse_map.cpp.o
+
+15diffuse_map.i: 15diffuse_map.cpp.i
+
+.PHONY : 15diffuse_map.i
+
+# target to preprocess a source file
+15diffuse_map.cpp.i:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/15diffuse_map.dir/build.make 02Lighting/CMakeFiles/15diffuse_map.dir/15diffuse_map.cpp.i
+.PHONY : 15diffuse_map.cpp.i
+
+15diffuse_map.s: 15diffuse_map.cpp.s
+
+.PHONY : 15diffuse_map.s
+
+# target to generate assembly for a file
+15diffuse_map.cpp.s:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/15diffuse_map.dir/build.make 02Lighting/CMakeFiles/15diffuse_map.dir/15diffuse_map.cpp.s
+.PHONY : 15diffuse_map.cpp.s
+
+16specular_map.o: 16specular_map.cpp.o
+
+.PHONY : 16specular_map.o
+
+# target to build an object file
+16specular_map.cpp.o:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/16specular_map.dir/build.make 02Lighting/CMakeFiles/16specular_map.dir/16specular_map.cpp.o
+.PHONY : 16specular_map.cpp.o
+
+16specular_map.i: 16specular_map.cpp.i
+
+.PHONY : 16specular_map.i
+
+# target to preprocess a source file
+16specular_map.cpp.i:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/16specular_map.dir/build.make 02Lighting/CMakeFiles/16specular_map.dir/16specular_map.cpp.i
+.PHONY : 16specular_map.cpp.i
+
+16specular_map.s: 16specular_map.cpp.s
+
+.PHONY : 16specular_map.s
+
+# target to generate assembly for a file
+16specular_map.cpp.s:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/16specular_map.dir/build.make 02Lighting/CMakeFiles/16specular_map.dir/16specular_map.cpp.s
+.PHONY : 16specular_map.cpp.s
+
+17direction_light.o: 17direction_light.cpp.o
+
+.PHONY : 17direction_light.o
+
+# target to build an object file
+17direction_light.cpp.o:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/17direction_light.dir/build.make 02Lighting/CMakeFiles/17direction_light.dir/17direction_light.cpp.o
+.PHONY : 17direction_light.cpp.o
+
+17direction_light.i: 17direction_light.cpp.i
+
+.PHONY : 17direction_light.i
+
+# target to preprocess a source file
+17direction_light.cpp.i:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/17direction_light.dir/build.make 02Lighting/CMakeFiles/17direction_light.dir/17direction_light.cpp.i
+.PHONY : 17direction_light.cpp.i
+
+17direction_light.s: 17direction_light.cpp.s
+
+.PHONY : 17direction_light.s
+
+# target to generate assembly for a file
+17direction_light.cpp.s:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/17direction_light.dir/build.make 02Lighting/CMakeFiles/17direction_light.dir/17direction_light.cpp.s
+.PHONY : 17direction_light.cpp.s
+
+18point_light.o: 18point_light.cpp.o
+
+.PHONY : 18point_light.o
+
+# target to build an object file
+18point_light.cpp.o:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/18point_light.dir/build.make 02Lighting/CMakeFiles/18point_light.dir/18point_light.cpp.o
+.PHONY : 18point_light.cpp.o
+
+18point_light.i: 18point_light.cpp.i
+
+.PHONY : 18point_light.i
+
+# target to preprocess a source file
+18point_light.cpp.i:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/18point_light.dir/build.make 02Lighting/CMakeFiles/18point_light.dir/18point_light.cpp.i
+.PHONY : 18point_light.cpp.i
+
+18point_light.s: 18point_light.cpp.s
+
+.PHONY : 18point_light.s
+
+# target to generate assembly for a file
+18point_light.cpp.s:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/18point_light.dir/build.make 02Lighting/CMakeFiles/18point_light.dir/18point_light.cpp.s
+.PHONY : 18point_light.cpp.s
+
+19flash_light.o: 19flash_light.cpp.o
+
+.PHONY : 19flash_light.o
+
+# target to build an object file
+19flash_light.cpp.o:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/19flash_light.dir/build.make 02Lighting/CMakeFiles/19flash_light.dir/19flash_light.cpp.o
+.PHONY : 19flash_light.cpp.o
+
+19flash_light.i: 19flash_light.cpp.i
+
+.PHONY : 19flash_light.i
+
+# target to preprocess a source file
+19flash_light.cpp.i:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/19flash_light.dir/build.make 02Lighting/CMakeFiles/19flash_light.dir/19flash_light.cpp.i
+.PHONY : 19flash_light.cpp.i
+
+19flash_light.s: 19flash_light.cpp.s
+
+.PHONY : 19flash_light.s
+
+# target to generate assembly for a file
+19flash_light.cpp.s:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/19flash_light.dir/build.make 02Lighting/CMakeFiles/19flash_light.dir/19flash_light.cpp.s
+.PHONY : 19flash_light.cpp.s
+
+20soft_edge_light.o: 20soft_edge_light.cpp.o
+
+.PHONY : 20soft_edge_light.o
+
+# target to build an object file
+20soft_edge_light.cpp.o:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/20soft_edge_light.dir/build.make 02Lighting/CMakeFiles/20soft_edge_light.dir/20soft_edge_light.cpp.o
+.PHONY : 20soft_edge_light.cpp.o
+
+20soft_edge_light.i: 20soft_edge_light.cpp.i
+
+.PHONY : 20soft_edge_light.i
+
+# target to preprocess a source file
+20soft_edge_light.cpp.i:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/20soft_edge_light.dir/build.make 02Lighting/CMakeFiles/20soft_edge_light.dir/20soft_edge_light.cpp.i
+.PHONY : 20soft_edge_light.cpp.i
+
+20soft_edge_light.s: 20soft_edge_light.cpp.s
+
+.PHONY : 20soft_edge_light.s
+
+# target to generate assembly for a file
+20soft_edge_light.cpp.s:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/20soft_edge_light.dir/build.make 02Lighting/CMakeFiles/20soft_edge_light.dir/20soft_edge_light.cpp.s
+.PHONY : 20soft_edge_light.cpp.s
+
+21multiple_light.o: 21multiple_light.cpp.o
+
+.PHONY : 21multiple_light.o
+
+# target to build an object file
+21multiple_light.cpp.o:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/21multiple_light.dir/build.make 02Lighting/CMakeFiles/21multiple_light.dir/21multiple_light.cpp.o
+.PHONY : 21multiple_light.cpp.o
+
+21multiple_light.i: 21multiple_light.cpp.i
+
+.PHONY : 21multiple_light.i
+
+# target to preprocess a source file
+21multiple_light.cpp.i:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/21multiple_light.dir/build.make 02Lighting/CMakeFiles/21multiple_light.dir/21multiple_light.cpp.i
+.PHONY : 21multiple_light.cpp.i
+
+21multiple_light.s: 21multiple_light.cpp.s
+
+.PHONY : 21multiple_light.s
+
+# target to generate assembly for a file
+21multiple_light.cpp.s:
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/21multiple_light.dir/build.make 02Lighting/CMakeFiles/21multiple_light.dir/21multiple_light.cpp.s
+.PHONY : 21multiple_light.cpp.s
+
 __/glad/src/glad.o: __/glad/src/glad.c.o
 
 .PHONY : __/glad/src/glad.o
 
 # target to build an object file
 __/glad/src/glad.c.o:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/__/glad/src/glad.c.o
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/21multiple_light.dir/build.make 02Lighting/CMakeFiles/21multiple_light.dir/__/glad/src/glad.c.o
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/12ambient_diffuse.dir/build.make 02Lighting/CMakeFiles/12ambient_diffuse.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/15diffuse_map.dir/build.make 02Lighting/CMakeFiles/15diffuse_map.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/19flash_light.dir/build.make 02Lighting/CMakeFiles/19flash_light.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/__/glad/src/glad.c.o
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/11color_test.dir/build.make 02Lighting/CMakeFiles/11color_test.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/16specular_map.dir/build.make 02Lighting/CMakeFiles/16specular_map.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/17direction_light.dir/build.make 02Lighting/CMakeFiles/17direction_light.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/18point_light.dir/build.make 02Lighting/CMakeFiles/18point_light.dir/__/glad/src/glad.c.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/20soft_edge_light.dir/build.make 02Lighting/CMakeFiles/20soft_edge_light.dir/__/glad/src/glad.c.o
 .PHONY : __/glad/src/glad.c.o
 
 __/glad/src/glad.i: __/glad/src/glad.c.i
@@ -340,10 +641,17 @@ __/glad/src/glad.i: __/glad/src/glad.c.i
 
 # target to preprocess a source file
 __/glad/src/glad.c.i:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/__/glad/src/glad.c.i
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/21multiple_light.dir/build.make 02Lighting/CMakeFiles/21multiple_light.dir/__/glad/src/glad.c.i
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/12ambient_diffuse.dir/build.make 02Lighting/CMakeFiles/12ambient_diffuse.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/15diffuse_map.dir/build.make 02Lighting/CMakeFiles/15diffuse_map.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/19flash_light.dir/build.make 02Lighting/CMakeFiles/19flash_light.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/__/glad/src/glad.c.i
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/11color_test.dir/build.make 02Lighting/CMakeFiles/11color_test.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/16specular_map.dir/build.make 02Lighting/CMakeFiles/16specular_map.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/17direction_light.dir/build.make 02Lighting/CMakeFiles/17direction_light.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/18point_light.dir/build.make 02Lighting/CMakeFiles/18point_light.dir/__/glad/src/glad.c.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/20soft_edge_light.dir/build.make 02Lighting/CMakeFiles/20soft_edge_light.dir/__/glad/src/glad.c.i
 .PHONY : __/glad/src/glad.c.i
 
 __/glad/src/glad.s: __/glad/src/glad.c.s
@@ -352,10 +660,17 @@ __/glad/src/glad.s: __/glad/src/glad.c.s
 
 # target to generate assembly for a file
 __/glad/src/glad.c.s:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/__/glad/src/glad.c.s
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/21multiple_light.dir/build.make 02Lighting/CMakeFiles/21multiple_light.dir/__/glad/src/glad.c.s
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/12ambient_diffuse.dir/build.make 02Lighting/CMakeFiles/12ambient_diffuse.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/15diffuse_map.dir/build.make 02Lighting/CMakeFiles/15diffuse_map.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/19flash_light.dir/build.make 02Lighting/CMakeFiles/19flash_light.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/__/glad/src/glad.c.s
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/11color_test.dir/build.make 02Lighting/CMakeFiles/11color_test.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/16specular_map.dir/build.make 02Lighting/CMakeFiles/16specular_map.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/17direction_light.dir/build.make 02Lighting/CMakeFiles/17direction_light.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/18point_light.dir/build.make 02Lighting/CMakeFiles/18point_light.dir/__/glad/src/glad.c.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/20soft_edge_light.dir/build.make 02Lighting/CMakeFiles/20soft_edge_light.dir/__/glad/src/glad.c.s
 .PHONY : __/glad/src/glad.c.s
 
 __/stb_image.o: __/stb_image.cpp.o
@@ -364,10 +679,17 @@ __/stb_image.o: __/stb_image.cpp.o
 
 # target to build an object file
 __/stb_image.cpp.o:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/__/stb_image.cpp.o
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/__/stb_image.cpp.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/21multiple_light.dir/build.make 02Lighting/CMakeFiles/21multiple_light.dir/__/stb_image.cpp.o
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/12ambient_diffuse.dir/build.make 02Lighting/CMakeFiles/12ambient_diffuse.dir/__/stb_image.cpp.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/__/stb_image.cpp.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/15diffuse_map.dir/build.make 02Lighting/CMakeFiles/15diffuse_map.dir/__/stb_image.cpp.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/19flash_light.dir/build.make 02Lighting/CMakeFiles/19flash_light.dir/__/stb_image.cpp.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/__/stb_image.cpp.o
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/11color_test.dir/build.make 02Lighting/CMakeFiles/11color_test.dir/__/stb_image.cpp.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/16specular_map.dir/build.make 02Lighting/CMakeFiles/16specular_map.dir/__/stb_image.cpp.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/17direction_light.dir/build.make 02Lighting/CMakeFiles/17direction_light.dir/__/stb_image.cpp.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/18point_light.dir/build.make 02Lighting/CMakeFiles/18point_light.dir/__/stb_image.cpp.o
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/20soft_edge_light.dir/build.make 02Lighting/CMakeFiles/20soft_edge_light.dir/__/stb_image.cpp.o
 .PHONY : __/stb_image.cpp.o
 
 __/stb_image.i: __/stb_image.cpp.i
@@ -376,10 +698,17 @@ __/stb_image.i: __/stb_image.cpp.i
 
 # target to preprocess a source file
 __/stb_image.cpp.i:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/__/stb_image.cpp.i
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/__/stb_image.cpp.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/21multiple_light.dir/build.make 02Lighting/CMakeFiles/21multiple_light.dir/__/stb_image.cpp.i
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/12ambient_diffuse.dir/build.make 02Lighting/CMakeFiles/12ambient_diffuse.dir/__/stb_image.cpp.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/__/stb_image.cpp.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/15diffuse_map.dir/build.make 02Lighting/CMakeFiles/15diffuse_map.dir/__/stb_image.cpp.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/19flash_light.dir/build.make 02Lighting/CMakeFiles/19flash_light.dir/__/stb_image.cpp.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/__/stb_image.cpp.i
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/11color_test.dir/build.make 02Lighting/CMakeFiles/11color_test.dir/__/stb_image.cpp.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/16specular_map.dir/build.make 02Lighting/CMakeFiles/16specular_map.dir/__/stb_image.cpp.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/17direction_light.dir/build.make 02Lighting/CMakeFiles/17direction_light.dir/__/stb_image.cpp.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/18point_light.dir/build.make 02Lighting/CMakeFiles/18point_light.dir/__/stb_image.cpp.i
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/20soft_edge_light.dir/build.make 02Lighting/CMakeFiles/20soft_edge_light.dir/__/stb_image.cpp.i
 .PHONY : __/stb_image.cpp.i
 
 __/stb_image.s: __/stb_image.cpp.s
@@ -388,10 +717,17 @@ __/stb_image.s: __/stb_image.cpp.s
 
 # target to generate assembly for a file
 __/stb_image.cpp.s:
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/__/stb_image.cpp.s
-	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/__/stb_image.cpp.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/21multiple_light.dir/build.make 02Lighting/CMakeFiles/21multiple_light.dir/__/stb_image.cpp.s
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/12ambient_diffuse.dir/build.make 02Lighting/CMakeFiles/12ambient_diffuse.dir/__/stb_image.cpp.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/__/stb_image.cpp.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/15diffuse_map.dir/build.make 02Lighting/CMakeFiles/15diffuse_map.dir/__/stb_image.cpp.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/19flash_light.dir/build.make 02Lighting/CMakeFiles/19flash_light.dir/__/stb_image.cpp.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/__/stb_image.cpp.s
 	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/11color_test.dir/build.make 02Lighting/CMakeFiles/11color_test.dir/__/stb_image.cpp.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/16specular_map.dir/build.make 02Lighting/CMakeFiles/16specular_map.dir/__/stb_image.cpp.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/17direction_light.dir/build.make 02Lighting/CMakeFiles/17direction_light.dir/__/stb_image.cpp.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/18point_light.dir/build.make 02Lighting/CMakeFiles/18point_light.dir/__/stb_image.cpp.s
+	cd /home/wang/github/LearnOpenGL/build && $(MAKE) -f 02Lighting/CMakeFiles/20soft_edge_light.dir/build.make 02Lighting/CMakeFiles/20soft_edge_light.dir/__/stb_image.cpp.s
 .PHONY : __/stb_image.cpp.s
 
 # Help Target
@@ -400,16 +736,23 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... install"
+	@echo "... install/strip"
 	@echo "... list_install_components"
-	@echo "... 14materials"
-	@echo "... 13specular_light"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... 21multiple_light"
 	@echo "... 12ambient_diffuse"
+	@echo "... 13specular_light"
+	@echo "... 15diffuse_map"
+	@echo "... 19flash_light"
+	@echo "... 14materials"
 	@echo "... 11color_test"
+	@echo "... 16specular_map"
+	@echo "... 17direction_light"
+	@echo "... 18point_light"
+	@echo "... 20soft_edge_light"
 	@echo "... 11color_test.o"
 	@echo "... 11color_test.i"
 	@echo "... 11color_test.s"
@@ -422,6 +765,27 @@ help:
 	@echo "... 14materials.o"
 	@echo "... 14materials.i"
 	@echo "... 14materials.s"
+	@echo "... 15diffuse_map.o"
+	@echo "... 15diffuse_map.i"
+	@echo "... 15diffuse_map.s"
+	@echo "... 16specular_map.o"
+	@echo "... 16specular_map.i"
+	@echo "... 16specular_map.s"
+	@echo "... 17direction_light.o"
+	@echo "... 17direction_light.i"
+	@echo "... 17direction_light.s"
+	@echo "... 18point_light.o"
+	@echo "... 18point_light.i"
+	@echo "... 18point_light.s"
+	@echo "... 19flash_light.o"
+	@echo "... 19flash_light.i"
+	@echo "... 19flash_light.s"
+	@echo "... 20soft_edge_light.o"
+	@echo "... 20soft_edge_light.i"
+	@echo "... 20soft_edge_light.s"
+	@echo "... 21multiple_light.o"
+	@echo "... 21multiple_light.i"
+	@echo "... 21multiple_light.s"
 	@echo "... __/glad/src/glad.o"
 	@echo "... __/glad/src/glad.i"
 	@echo "... __/glad/src/glad.s"

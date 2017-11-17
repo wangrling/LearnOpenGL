@@ -92,7 +92,7 @@ install/fast: preinstall/fast
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"assimp-bin\" \"assimp-dev\" \"libassimp4.0.1-dev\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -166,6 +166,435 @@ glm_dummy: cmake_check_build_system
 glm_dummy/fast:
 	$(MAKE) -f glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/build.make glm-0.9.8.5/glm/CMakeFiles/glm_dummy.dir/build
 .PHONY : glm_dummy/fast
+
+#=============================================================================
+# Target rules for targets named uninstall
+
+# Build rule for target.
+uninstall: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uninstall
+.PHONY : uninstall
+
+# fast build rule for target.
+uninstall/fast:
+	$(MAKE) -f assimp-4.0.1/CMakeFiles/uninstall.dir/build.make assimp-4.0.1/CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
+
+#=============================================================================
+# Target rules for targets named IrrXML
+
+# Build rule for target.
+IrrXML: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 IrrXML
+.PHONY : IrrXML
+
+# fast build rule for target.
+IrrXML/fast:
+	$(MAKE) -f assimp-4.0.1/contrib/irrXML/CMakeFiles/IrrXML.dir/build.make assimp-4.0.1/contrib/irrXML/CMakeFiles/IrrXML.dir/build
+.PHONY : IrrXML/fast
+
+#=============================================================================
+# Target rules for targets named assimp
+
+# Build rule for target.
+assimp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 assimp
+.PHONY : assimp
+
+# fast build rule for target.
+assimp/fast:
+	$(MAKE) -f assimp-4.0.1/code/CMakeFiles/assimp.dir/build.make assimp-4.0.1/code/CMakeFiles/assimp.dir/build
+.PHONY : assimp/fast
+
+#=============================================================================
+# Target rules for targets named assimp_cmd
+
+# Build rule for target.
+assimp_cmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 assimp_cmd
+.PHONY : assimp_cmd
+
+# fast build rule for target.
+assimp_cmd/fast:
+	$(MAKE) -f assimp-4.0.1/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/build.make assimp-4.0.1/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/build
+.PHONY : assimp_cmd/fast
+
+#=============================================================================
+# Target rules for targets named unit
+
+# Build rule for target.
+unit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 unit
+.PHONY : unit
+
+# fast build rule for target.
+unit/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/unit.dir/build.make assimp-4.0.1/test/CMakeFiles/unit.dir/build
+.PHONY : unit/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousSubmit
+
+# Build rule for target.
+ContinuousSubmit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousSubmit
+.PHONY : ContinuousSubmit
+
+# fast build rule for target.
+ContinuousSubmit/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ContinuousSubmit.dir/build.make assimp-4.0.1/test/CMakeFiles/ContinuousSubmit.dir/build
+.PHONY : ContinuousSubmit/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousCoverage
+
+# Build rule for target.
+ContinuousCoverage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousCoverage
+.PHONY : ContinuousCoverage
+
+# fast build rule for target.
+ContinuousCoverage/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ContinuousCoverage.dir/build.make assimp-4.0.1/test/CMakeFiles/ContinuousCoverage.dir/build
+.PHONY : ContinuousCoverage/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousTest
+
+# Build rule for target.
+ContinuousTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousTest
+.PHONY : ContinuousTest
+
+# fast build rule for target.
+ContinuousTest/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ContinuousTest.dir/build.make assimp-4.0.1/test/CMakeFiles/ContinuousTest.dir/build
+.PHONY : ContinuousTest/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousBuild
+
+# Build rule for target.
+ContinuousBuild: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousBuild
+.PHONY : ContinuousBuild
+
+# fast build rule for target.
+ContinuousBuild/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ContinuousBuild.dir/build.make assimp-4.0.1/test/CMakeFiles/ContinuousBuild.dir/build
+.PHONY : ContinuousBuild/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousMemCheck
+
+# Build rule for target.
+ContinuousMemCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousMemCheck
+.PHONY : ContinuousMemCheck
+
+# fast build rule for target.
+ContinuousMemCheck/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ContinuousMemCheck.dir/build.make assimp-4.0.1/test/CMakeFiles/ContinuousMemCheck.dir/build
+.PHONY : ContinuousMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named Nightly
+
+# Build rule for target.
+Nightly: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Nightly
+.PHONY : Nightly
+
+# fast build rule for target.
+Nightly/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/Nightly.dir/build.make assimp-4.0.1/test/CMakeFiles/Nightly.dir/build
+.PHONY : Nightly/fast
+
+#=============================================================================
+# Target rules for targets named NightlyTest
+
+# Build rule for target.
+NightlyTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyTest
+.PHONY : NightlyTest
+
+# fast build rule for target.
+NightlyTest/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/NightlyTest.dir/build.make assimp-4.0.1/test/CMakeFiles/NightlyTest.dir/build
+.PHONY : NightlyTest/fast
+
+#=============================================================================
+# Target rules for targets named NightlyUpdate
+
+# Build rule for target.
+NightlyUpdate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyUpdate
+.PHONY : NightlyUpdate
+
+# fast build rule for target.
+NightlyUpdate/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/NightlyUpdate.dir/build.make assimp-4.0.1/test/CMakeFiles/NightlyUpdate.dir/build
+.PHONY : NightlyUpdate/fast
+
+#=============================================================================
+# Target rules for targets named NightlyBuild
+
+# Build rule for target.
+NightlyBuild: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyBuild
+.PHONY : NightlyBuild
+
+# fast build rule for target.
+NightlyBuild/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/NightlyBuild.dir/build.make assimp-4.0.1/test/CMakeFiles/NightlyBuild.dir/build
+.PHONY : NightlyBuild/fast
+
+#=============================================================================
+# Target rules for targets named Continuous
+
+# Build rule for target.
+Continuous: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Continuous
+.PHONY : Continuous
+
+# fast build rule for target.
+Continuous/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/Continuous.dir/build.make assimp-4.0.1/test/CMakeFiles/Continuous.dir/build
+.PHONY : Continuous/fast
+
+#=============================================================================
+# Target rules for targets named NightlyStart
+
+# Build rule for target.
+NightlyStart: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyStart
+.PHONY : NightlyStart
+
+# fast build rule for target.
+NightlyStart/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/NightlyStart.dir/build.make assimp-4.0.1/test/CMakeFiles/NightlyStart.dir/build
+.PHONY : NightlyStart/fast
+
+#=============================================================================
+# Target rules for targets named NightlyMemoryCheck
+
+# Build rule for target.
+NightlyMemoryCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyMemoryCheck
+.PHONY : NightlyMemoryCheck
+
+# fast build rule for target.
+NightlyMemoryCheck/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/NightlyMemoryCheck.dir/build.make assimp-4.0.1/test/CMakeFiles/NightlyMemoryCheck.dir/build
+.PHONY : NightlyMemoryCheck/fast
+
+#=============================================================================
+# Target rules for targets named NightlyMemCheck
+
+# Build rule for target.
+NightlyMemCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyMemCheck
+.PHONY : NightlyMemCheck
+
+# fast build rule for target.
+NightlyMemCheck/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/NightlyMemCheck.dir/build.make assimp-4.0.1/test/CMakeFiles/NightlyMemCheck.dir/build
+.PHONY : NightlyMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalStart
+
+# Build rule for target.
+ExperimentalStart: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalStart
+.PHONY : ExperimentalStart
+
+# fast build rule for target.
+ExperimentalStart/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ExperimentalStart.dir/build.make assimp-4.0.1/test/CMakeFiles/ExperimentalStart.dir/build
+.PHONY : ExperimentalStart/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousConfigure
+
+# Build rule for target.
+ContinuousConfigure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousConfigure
+.PHONY : ContinuousConfigure
+
+# fast build rule for target.
+ContinuousConfigure/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ContinuousConfigure.dir/build.make assimp-4.0.1/test/CMakeFiles/ContinuousConfigure.dir/build
+.PHONY : ContinuousConfigure/fast
+
+#=============================================================================
+# Target rules for targets named NightlyCoverage
+
+# Build rule for target.
+NightlyCoverage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyCoverage
+.PHONY : NightlyCoverage
+
+# fast build rule for target.
+NightlyCoverage/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/NightlyCoverage.dir/build.make assimp-4.0.1/test/CMakeFiles/NightlyCoverage.dir/build
+.PHONY : NightlyCoverage/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalUpdate
+
+# Build rule for target.
+ExperimentalUpdate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalUpdate
+.PHONY : ExperimentalUpdate
+
+# fast build rule for target.
+ExperimentalUpdate/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ExperimentalUpdate.dir/build.make assimp-4.0.1/test/CMakeFiles/ExperimentalUpdate.dir/build
+.PHONY : ExperimentalUpdate/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalConfigure
+
+# Build rule for target.
+ExperimentalConfigure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalConfigure
+.PHONY : ExperimentalConfigure
+
+# fast build rule for target.
+ExperimentalConfigure/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ExperimentalConfigure.dir/build.make assimp-4.0.1/test/CMakeFiles/ExperimentalConfigure.dir/build
+.PHONY : ExperimentalConfigure/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalCoverage
+
+# Build rule for target.
+ExperimentalCoverage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalCoverage
+.PHONY : ExperimentalCoverage
+
+# fast build rule for target.
+ExperimentalCoverage/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ExperimentalCoverage.dir/build.make assimp-4.0.1/test/CMakeFiles/ExperimentalCoverage.dir/build
+.PHONY : ExperimentalCoverage/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalBuild
+
+# Build rule for target.
+ExperimentalBuild: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalBuild
+.PHONY : ExperimentalBuild
+
+# fast build rule for target.
+ExperimentalBuild/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ExperimentalBuild.dir/build.make assimp-4.0.1/test/CMakeFiles/ExperimentalBuild.dir/build
+.PHONY : ExperimentalBuild/fast
+
+#=============================================================================
+# Target rules for targets named NightlyConfigure
+
+# Build rule for target.
+NightlyConfigure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyConfigure
+.PHONY : NightlyConfigure
+
+# fast build rule for target.
+NightlyConfigure/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/NightlyConfigure.dir/build.make assimp-4.0.1/test/CMakeFiles/NightlyConfigure.dir/build
+.PHONY : NightlyConfigure/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalTest
+
+# Build rule for target.
+ExperimentalTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalTest
+.PHONY : ExperimentalTest
+
+# fast build rule for target.
+ExperimentalTest/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ExperimentalTest.dir/build.make assimp-4.0.1/test/CMakeFiles/ExperimentalTest.dir/build
+.PHONY : ExperimentalTest/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalMemCheck
+
+# Build rule for target.
+ExperimentalMemCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalMemCheck
+.PHONY : ExperimentalMemCheck
+
+# fast build rule for target.
+ExperimentalMemCheck/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ExperimentalMemCheck.dir/build.make assimp-4.0.1/test/CMakeFiles/ExperimentalMemCheck.dir/build
+.PHONY : ExperimentalMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named Experimental
+
+# Build rule for target.
+Experimental: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Experimental
+.PHONY : Experimental
+
+# fast build rule for target.
+Experimental/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/Experimental.dir/build.make assimp-4.0.1/test/CMakeFiles/Experimental.dir/build
+.PHONY : Experimental/fast
+
+#=============================================================================
+# Target rules for targets named NightlySubmit
+
+# Build rule for target.
+NightlySubmit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlySubmit
+.PHONY : NightlySubmit
+
+# fast build rule for target.
+NightlySubmit/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/NightlySubmit.dir/build.make assimp-4.0.1/test/CMakeFiles/NightlySubmit.dir/build
+.PHONY : NightlySubmit/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalSubmit
+
+# Build rule for target.
+ExperimentalSubmit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalSubmit
+.PHONY : ExperimentalSubmit
+
+# fast build rule for target.
+ExperimentalSubmit/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ExperimentalSubmit.dir/build.make assimp-4.0.1/test/CMakeFiles/ExperimentalSubmit.dir/build
+.PHONY : ExperimentalSubmit/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousStart
+
+# Build rule for target.
+ContinuousStart: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousStart
+.PHONY : ContinuousStart
+
+# fast build rule for target.
+ContinuousStart/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ContinuousStart.dir/build.make assimp-4.0.1/test/CMakeFiles/ContinuousStart.dir/build
+.PHONY : ContinuousStart/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousUpdate
+
+# Build rule for target.
+ContinuousUpdate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousUpdate
+.PHONY : ContinuousUpdate
+
+# fast build rule for target.
+ContinuousUpdate/fast:
+	$(MAKE) -f assimp-4.0.1/test/CMakeFiles/ContinuousUpdate.dir/build.make assimp-4.0.1/test/CMakeFiles/ContinuousUpdate.dir/build
+.PHONY : ContinuousUpdate/fast
 
 #=============================================================================
 # Target rules for targets named 01hello_window_clear
@@ -298,30 +727,17 @@ glm_dummy/fast:
 .PHONY : 09camera_mouse_zoom/fast
 
 #=============================================================================
-# Target rules for targets named 14materials
+# Target rules for targets named 21multiple_light
 
 # Build rule for target.
-14materials: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 14materials
-.PHONY : 14materials
+21multiple_light: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 21multiple_light
+.PHONY : 21multiple_light
 
 # fast build rule for target.
-14materials/fast:
-	$(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/build
-.PHONY : 14materials/fast
-
-#=============================================================================
-# Target rules for targets named 13specular_light
-
-# Build rule for target.
-13specular_light: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 13specular_light
-.PHONY : 13specular_light
-
-# fast build rule for target.
-13specular_light/fast:
-	$(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/build
-.PHONY : 13specular_light/fast
+21multiple_light/fast:
+	$(MAKE) -f 02Lighting/CMakeFiles/21multiple_light.dir/build.make 02Lighting/CMakeFiles/21multiple_light.dir/build
+.PHONY : 21multiple_light/fast
 
 #=============================================================================
 # Target rules for targets named 12ambient_diffuse
@@ -337,6 +753,58 @@ glm_dummy/fast:
 .PHONY : 12ambient_diffuse/fast
 
 #=============================================================================
+# Target rules for targets named 13specular_light
+
+# Build rule for target.
+13specular_light: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 13specular_light
+.PHONY : 13specular_light
+
+# fast build rule for target.
+13specular_light/fast:
+	$(MAKE) -f 02Lighting/CMakeFiles/13specular_light.dir/build.make 02Lighting/CMakeFiles/13specular_light.dir/build
+.PHONY : 13specular_light/fast
+
+#=============================================================================
+# Target rules for targets named 15diffuse_map
+
+# Build rule for target.
+15diffuse_map: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 15diffuse_map
+.PHONY : 15diffuse_map
+
+# fast build rule for target.
+15diffuse_map/fast:
+	$(MAKE) -f 02Lighting/CMakeFiles/15diffuse_map.dir/build.make 02Lighting/CMakeFiles/15diffuse_map.dir/build
+.PHONY : 15diffuse_map/fast
+
+#=============================================================================
+# Target rules for targets named 19flash_light
+
+# Build rule for target.
+19flash_light: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 19flash_light
+.PHONY : 19flash_light
+
+# fast build rule for target.
+19flash_light/fast:
+	$(MAKE) -f 02Lighting/CMakeFiles/19flash_light.dir/build.make 02Lighting/CMakeFiles/19flash_light.dir/build
+.PHONY : 19flash_light/fast
+
+#=============================================================================
+# Target rules for targets named 14materials
+
+# Build rule for target.
+14materials: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 14materials
+.PHONY : 14materials
+
+# fast build rule for target.
+14materials/fast:
+	$(MAKE) -f 02Lighting/CMakeFiles/14materials.dir/build.make 02Lighting/CMakeFiles/14materials.dir/build
+.PHONY : 14materials/fast
+
+#=============================================================================
 # Target rules for targets named 11color_test
 
 # Build rule for target.
@@ -348,6 +816,71 @@ glm_dummy/fast:
 11color_test/fast:
 	$(MAKE) -f 02Lighting/CMakeFiles/11color_test.dir/build.make 02Lighting/CMakeFiles/11color_test.dir/build
 .PHONY : 11color_test/fast
+
+#=============================================================================
+# Target rules for targets named 16specular_map
+
+# Build rule for target.
+16specular_map: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 16specular_map
+.PHONY : 16specular_map
+
+# fast build rule for target.
+16specular_map/fast:
+	$(MAKE) -f 02Lighting/CMakeFiles/16specular_map.dir/build.make 02Lighting/CMakeFiles/16specular_map.dir/build
+.PHONY : 16specular_map/fast
+
+#=============================================================================
+# Target rules for targets named 17direction_light
+
+# Build rule for target.
+17direction_light: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 17direction_light
+.PHONY : 17direction_light
+
+# fast build rule for target.
+17direction_light/fast:
+	$(MAKE) -f 02Lighting/CMakeFiles/17direction_light.dir/build.make 02Lighting/CMakeFiles/17direction_light.dir/build
+.PHONY : 17direction_light/fast
+
+#=============================================================================
+# Target rules for targets named 18point_light
+
+# Build rule for target.
+18point_light: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 18point_light
+.PHONY : 18point_light
+
+# fast build rule for target.
+18point_light/fast:
+	$(MAKE) -f 02Lighting/CMakeFiles/18point_light.dir/build.make 02Lighting/CMakeFiles/18point_light.dir/build
+.PHONY : 18point_light/fast
+
+#=============================================================================
+# Target rules for targets named 20soft_edge_light
+
+# Build rule for target.
+20soft_edge_light: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 20soft_edge_light
+.PHONY : 20soft_edge_light
+
+# fast build rule for target.
+20soft_edge_light/fast:
+	$(MAKE) -f 02Lighting/CMakeFiles/20soft_edge_light.dir/build.make 02Lighting/CMakeFiles/20soft_edge_light.dir/build
+.PHONY : 20soft_edge_light/fast
+
+#=============================================================================
+# Target rules for targets named 22nanosuit_loading
+
+# Build rule for target.
+22nanosuit_loading: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 22nanosuit_loading
+.PHONY : 22nanosuit_loading
+
+# fast build rule for target.
+22nanosuit_loading/fast:
+	$(MAKE) -f 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/build.make 03ModelLoading/CMakeFiles/22nanosuit_loading.dir/build
+.PHONY : 22nanosuit_loading/fast
 
 # Help Target
 help:
@@ -362,6 +895,39 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... glm_dummy"
+	@echo "... uninstall"
+	@echo "... IrrXML"
+	@echo "... assimp"
+	@echo "... assimp_cmd"
+	@echo "... unit"
+	@echo "... ContinuousSubmit"
+	@echo "... ContinuousCoverage"
+	@echo "... ContinuousTest"
+	@echo "... ContinuousBuild"
+	@echo "... ContinuousMemCheck"
+	@echo "... Nightly"
+	@echo "... NightlyTest"
+	@echo "... NightlyUpdate"
+	@echo "... NightlyBuild"
+	@echo "... Continuous"
+	@echo "... NightlyStart"
+	@echo "... NightlyMemoryCheck"
+	@echo "... NightlyMemCheck"
+	@echo "... ExperimentalStart"
+	@echo "... ContinuousConfigure"
+	@echo "... NightlyCoverage"
+	@echo "... ExperimentalUpdate"
+	@echo "... ExperimentalConfigure"
+	@echo "... ExperimentalCoverage"
+	@echo "... ExperimentalBuild"
+	@echo "... NightlyConfigure"
+	@echo "... ExperimentalTest"
+	@echo "... ExperimentalMemCheck"
+	@echo "... Experimental"
+	@echo "... NightlySubmit"
+	@echo "... ExperimentalSubmit"
+	@echo "... ContinuousStart"
+	@echo "... ContinuousUpdate"
 	@echo "... 01hello_window_clear"
 	@echo "... 04textures_combined"
 	@echo "... 07camera_circle"
@@ -372,10 +938,18 @@ help:
 	@echo "... 05transformation_matrix"
 	@echo "... 08camera_keyboard"
 	@echo "... 09camera_mouse_zoom"
-	@echo "... 14materials"
-	@echo "... 13specular_light"
+	@echo "... 21multiple_light"
 	@echo "... 12ambient_diffuse"
+	@echo "... 13specular_light"
+	@echo "... 15diffuse_map"
+	@echo "... 19flash_light"
+	@echo "... 14materials"
 	@echo "... 11color_test"
+	@echo "... 16specular_map"
+	@echo "... 17direction_light"
+	@echo "... 18point_light"
+	@echo "... 20soft_edge_light"
+	@echo "... 22nanosuit_loading"
 .PHONY : help
 
 
